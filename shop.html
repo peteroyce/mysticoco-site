@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mysti CoCo – Shop Virgin Coconut Milk Oil</title>
+  <meta name="description" content="Shop Mysti CoCo Virgin Coconut Milk Oil – pure, cold‑pressed coconut goodness in every drop." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cocoGreen: '#2F7A4A',
+            cocoGreenLight: '#4FAF70',
+            cocoBrown: '#8B5A2B',
+            cocoBeige: '#F4EEE4',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white font-sans text-slate-800">
+  <!-- Header / Nav (same as index) -->
+  <header class="sticky top-0 z-20 bg-white/90 backdrop-blur shadow-sm">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="./index.html" class="flex items-center gap-2">
+        <span class="inline-block rounded-full bg-cocoGreen px-3 py-1 text-sm font-semibold text-white">Mysti</span>
+        <span class="text-xl font-semibold text-cocoGreen">CoCo</span>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+        <a href="./index.html" class="hover:text-cocoGreen">Home</a>
+        <a href="./shop.html" class="text-cocoGreen">Shop</a>
+        <a href="./index.html#about" class="hover:text-cocoGreen">About</a>
+        <a href="./index.html#products" class="hover:text-cocoGreen">Products</a>
+        <a href="#contact" class="hover:text-cocoGreen">Contact</a>
+      </nav>
+
+      <button id="mobile-menu-btn" class="inline-flex items-center justify-center rounded-md p-2 text-cocoGreen md:hidden" aria-label="Open main menu">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden border-t border-slate-100 bg-white md:hidden">
+      <div class="mx-auto flex max-w-6xl flex-col px-4 py-3 text-sm font-medium text-slate-700">
+        <a href="./index.html" class="py-1 hover:text-cocoGreen">Home</a>
+        <a href="./shop.html" class="py-1 hover:text-cocoGreen">Shop</a>
+        <a href="./index.html#about" class="py-1 hover:text-cocoGreen">About</a>
+        <a href="./index.html#products" class="py-1 hover:text-cocoGreen">Products</a>
+        <a href="#contact" class="py-1 hover:text-cocoGreen">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Shop Hero -->
+    <section class="bg-cocoBeige/80">
+      <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div class="space-y-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cocoBrown">
+              Shop
+            </p>
+            <h1 class="text-3xl font-semibold text-cocoGreen sm:text-4xl">
+              Mysti CoCo Virgin Coconut Milk Oil
+            </h1>
+            <p class="text-sm text-slate-700">
+              Pure, cold‑pressed oil from fresh coconut milk – designed to fit seamlessly into your cooking, haircare and skincare rituals.
+            </p>
+            <ul class="space-y-1 text-sm text-slate-700">
+              <li>• Size: 500 ml bottle</li>
+              <li>• Texture: Light, non‑greasy, quick absorbing</li>
+              <li>• Aroma: Naturally fragrant coconut</li>
+            </ul>
+          </div>
+          <div>
+            <div class="mx-auto max-w-xs rounded-3xl bg-white p-4 shadow-lg">
+              <div class="aspect-[3/5] rounded-2xl bg-cocoGreenLight/15"></div>
+              <div class="mt-4 space-y-1 text-sm text-slate-700">
+                <p class="font-semibold text-cocoGreen">
+                  Mysti CoCo Virgin Coconut Milk Oil – 500 ml
+                </p>
+                <p class="text-xs">
+                  Update the price below once the official MRP is confirmed.
+                </p>
+                <p class="text-xs">
+                  MRP: <span class="font-semibold text-cocoGreen">₹XXX</span>
+                  <span class="text-slate-500">(placeholder)</span>
+                </p>
+              </div>
+              <div class="mt-4 flex flex-col gap-2">
+                <a href="#" class="inline-flex items-center justify-center rounded-full bg-cocoGreen px-5 py-2 text-xs font-semibold text-white hover:bg-cocoGreenLight">
+                  Buy now on WhatsApp
+                </a>
+                <a href="#" class="inline-flex items-center justify-center rounded-full border border-cocoGreen px-5 py-2 text-xs font-semibold text-cocoGreen hover:bg-white">
+                  Download product info (PDF)
+                </a>
+              </div>
+              <p class="mt-2 text-[11px] text-slate-500">
+                Note: Replace the links above with your actual WhatsApp number and PDF once ready.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="fade-section bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="text-2xl font-semibold text-cocoGreen">How to Use Mysti CoCo</h2>
+        <p class="mt-2 text-sm text-slate-700">
+          Always patch‑test on skin and follow your doctor’s advice, especially for babies and sensitive skin.
+        </p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class="space-y-3 rounded-3xl bg-cocoBeige/60 p-5">
+            <h3 class="text-sm font-semibold text-cocoGreen">Cooking</h3>
+            <p class="text-xs text-slate-700">
+              Use a spoonful for sautéing, tempering or baking where you would normally use cooking oil, for a gentle coconut aroma.
+            </p>
+          </div>
+          <div class="space-y-3 rounded-3xl bg-cocoBeige/60 p-5">
+            <h3 class="text-sm font-semibold text-cocoGreen">Hair</h3>
+            <p class="text-xs text-slate-700">
+              Warm slightly and massage into the scalp and hair lengths 30–45 minutes before washing for a soft, nourished finish.
+            </p>
+          </div>
+          <div class="space-y-3 rounded-3xl bg-cocoBeige/60 p-5">
+            <h3 class="text-sm font-semibold text-cocoGreen">Skin</h3>
+            <p class="text-xs text-slate-700">
+              Apply a thin layer on slightly damp skin after a shower to lock in moisture or use as an overnight hand and foot mask.
+            </p>
+          </div>
+          <div class="space-y-3 rounded-3xl bg-cocoBeige/60 p-5">
+            <h3 class="text-sm font-semibold text-cocoGreen">Baby Care*</h3>
+            <p class="text-xs text-slate-700">
+              Can be used as a massage oil only after consulting your paediatrician and checking for allergies. Always patch‑test first.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="fade-section bg-cocoBeige/60">
+      <div class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="text-2xl font-semibold text-cocoGreen">Frequently Asked Questions</h2>
+
+        <div class="mt-6 space-y-4 text-sm text-slate-800">
+          <details class="rounded-2xl bg-white p-4 shadow-sm">
+            <summary class="cursor-pointer font-semibold text-cocoGreen">
+              Is this oil edible?
+            </summary>
+            <p class="mt-2 text-xs text-slate-700">
+              Mysti CoCo virgin coconut milk oil is intended for edible use. Follow the directions on your product label and consult your healthcare provider if you have dietary concerns.
+            </p>
+          </details>
+
+          <details class="rounded-2xl bg-white p-4 shadow-sm">
+            <summary class="cursor-pointer font-semibold text-cocoGreen">
+              How should I store the oil?
+            </summary>
+            <p class="mt-2 text-xs text-slate-700">
+              Store in a cool, dry place away from direct sunlight with the cap tightly closed. Coconut oil may solidify in cooler temperatures; this is natural.
+            </p>
+          </details>
+
+          <details class="rounded-2xl bg-white p-4 shadow-sm">
+            <summary class="cursor-pointer font-semibold text-cocoGreen">
+              What is the shelf life?
+            </summary>
+            <p class="mt-2 text-xs text-slate-700">
+              Please refer to the “Best before” date printed on the bottle. Update this answer with your exact shelf‑life information.
+            </p>
+          </details>
+
+          <details class="rounded-2xl bg-white p-4 shadow-sm">
+            <summary class="cursor-pointer font-semibold text-cocoGreen">
+              Is it safe for sensitive skin?
+            </summary>
+            <p class="mt-2 text-xs text-slate-700">
+              Always patch‑test on a small area first. If irritation occurs, discontinue use and consult a dermatologist.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="border-t border-slate-100 bg-cocoBeige/60">
+    <div class="mx-auto max-w-6xl px-4 py-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div>
+          <h3 class="text-sm font-semibold text-cocoGreen">Mysti CoCo</h3>
+          <p class="mt-2 text-xs text-slate-700">
+            Official shop page for Mysti CoCo Virgin Coconut Milk Oil.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-cocoGreen">Contact</h4>
+          <p class="mt-2 text-xs text-slate-700">
+            Phone / WhatsApp: +91‑XXXXXXXXXX<br />
+            Email: hello@mysticoco.in<br />
+            Location: City, State
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-cocoGreen">Support</h4>
+          <p class="mt-2 text-xs text-slate-700">
+            For bulk or distributor enquiries, please reach out via email.
+          </p>
+        </div>
+      </div>
+      <p class="mt-6 text-center text-[11px] text-slate-500">
+        © <span id="year"></span> Mysti CoCo. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
