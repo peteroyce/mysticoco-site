@@ -1,545 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mysti CoCo – Shop Virgin Coconut Milk Oil</title>
-  <meta name="description" content="Shop Mysti CoCo Virgin Coconut Milk Oil and Coco Care ranges – pure, cold‑pressed coconut goodness in every drop." />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shop | Mysti CoCo Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cocoGreen: '#2F7A4A',
-            cocoGreenLight: '#4FAF70',
-            cocoBrown: '#8B5A2B',
-            cocoBeige: '#F4EEE4',
-          },
-          fontFamily: {
-            sans: ['Poppins', 'system-ui', 'sans-serif'],
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "sans-serif"],
+            },
+            colors: {
+              cocoGreen: "#1F7A3D",
+              cocoBeige: "#F8F3E9",
+              cocoGold: "#C9A24B",
+            },
+            boxShadow: {
+              "soft-xl": "0 28px 60px rgba(15, 23, 42, 0.18)",
+              "lift-card": "0 18px 40px rgba(15, 23, 42, 0.16)",
+            },
           },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-    .fade-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .pill-selected {
-      background-color: #2F7A4A;
-      color: #ffffff;
-    }
-  </style>
-</head>
-<body class="bg-white font-sans text-slate-800">
-  <!-- Header / Nav (same as index) -->
-  <header class="sticky top-0 z-20 bg-white/90 backdrop-blur shadow-sm">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="./index.html" class="flex items-center gap-2">
-        <span class="inline-block rounded-full bg-cocoGreen px-3 py-1 text-sm font-semibold text-white">Mysti</span>
-        <span class="text-xl font-semibold text-cocoGreen">CoCo</span>
-      </a>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-      <nav class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
-        <a href="./index.html" class="hover:text-cocoGreen">Home</a>
-        <a href="./shop.html" class="text-cocoGreen">Shop</a>
-        <a href="./index.html#about" class="hover:text-cocoGreen">About</a>
-        <a href="./index.html#products" class="hover:text-cocoGreen">Products</a>
-        <a href="#contact" class="hover:text-cocoGreen">Contact</a>
-      </nav>
-
-      <button id="mobile-menu-btn" class="inline-flex items-center justify-center rounded-md p-2 text-cocoGreen md:hidden" aria-label="Open main menu">
-        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-
-    <nav id="mobile-menu" class="hidden border-t border-slate-100 bg-white md:hidden">
-      <div class="mx-auto flex max-w-6xl flex-col px-4 py-3 text-sm font-medium text-slate-700">
-        <a href="./index.html" class="py-1 hover:text-cocoGreen">Home</a>
-        <a href="./shop.html" class="py-1 hover:text-cocoGreen">Shop</a>
-        <a href="./index.html#about" class="py-1 hover:text-cocoGreen">About</a>
-        <a href="./index.html#products" class="py-1 hover:text-cocoGreen">Products</a>
-        <a href="#contact" class="py-1 hover:text-cocoGreen">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Shop hero + featured product (like Amazon main panel) -->
-    <section class="bg-cocoBeige/80">
-      <div class="mx-auto max-w-6xl px-4 pt-4 pb-12 md:pt-6 md:pb-16">
-        <div class="grid gap-10 md:grid-cols-2 md:items-center">
-          <!-- Left: copy -->
-          <div class="space-y-4">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cocoBrown">
-              Shop
-            </p>
-            <h1 class="text-3xl font-semibold text-cocoGreen sm:text-4xl">
-              Mysti CoCo Virgin Coconut Oil Range
-            </h1>
-            <p class="text-sm text-slate-700">
-              Pure, cold‑pressed oil from fresh coconut milk – crafted for cooking, hair, skin, and baby massage. Choose the pack that fits your daily rituals.
-            </p>
-            <ul class="space-y-1 text-sm text-slate-700">
-              <li>• Extracted from fresh coconut milk, not dried copra.</li>
-              <li>• No mineral oils, added fragrance or preservatives.</li>
-              <li>• Light texture, quick absorbing, naturally aromatic.</li>
-            </ul>
+  <body class="min-h-screen bg-cocoBeige font-sans text-slate-800">
+    <!-- Navbar -->
+    <header
+      class="sticky top-0 z-20 bg-cocoBeige/95 backdrop-blur border-b border-emerald-50"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-700 text-lg font-semibold text-white shadow-md"
+          >
+            M
           </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-base font-semibold text-emerald-900">
+              Mysti CoCo
+            </span>
+            <span class="text-xs text-slate-500">
+              Virgin Coconut Milk Oil
+            </span>
+          </div>
+        </a>
 
-          <!-- Right: product visual + quick actions -->
-          <div>
-            <div class="mx-auto max-w-xs rounded-3xl bg-white p-4 shadow-lg">
-              <div class="aspect-[3/5] overflow-hidden rounded-2xl bg-cocoGreenLight/10">
-                <!-- Use your main pack shot when you have it -->
-                <img
-                  src="./assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
-                  alt="Mysti CoCo virgin coconut oil bottle"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div class="mt-4 space-y-1 text-sm text-slate-700">
-                <p class="font-semibold text-cocoGreen">
-                  Mysti CoCo Virgin Coconut Oil
-                </p>
-                <p class="text-xs">
-                  Available in 100 ml, 200 ml, 500 ml and 1 LTR packs.
-                </p>
-                <p class="text-xs text-slate-500">
-                  MRP: <span class="font-semibold text-cocoGreen">To be updated</span>
-                </p>
-              </div>
-              <div class="mt-4 flex flex-col gap-2">
-                <a
-                  href="#"
-                  class="inline-flex items-center justify-center rounded-full bg-cocoGreen px-5 py-2 text-xs font-semibold text-white hover:bg-cocoGreenLight"
+        <div
+          class="hidden items-center gap-6 text-sm font-medium text-slate-700 sm:flex"
+        >
+          <a href="index.html#about" class="hover:text-emerald-700">About</a>
+          <a href="index.html#benefits" class="hover:text-emerald-700">Benefits</a>
+          <a href="shop.html" class="text-emerald-700 font-semibold">Shop</a>
+          <a href="index.html#contact" class="hover:text-emerald-700">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Shop Header -->
+      <section class="bg-cocoBeige">
+        <div class="mx-auto max-w-6xl px-4 py-12">
+          <h1 class="text-3xl font-semibold text-emerald-900 sm:text-4xl">
+            Our Products
+          </h1>
+          <p class="mt-3 text-sm text-slate-600 sm:text-base max-w-2xl">
+            Explore our range of virgin coconut milk oils, crafted for everyday
+            use in the kitchen and self-care rituals.
+          </p>
+        </div>
+      </section>
+
+      <!-- Products Grid -->
+      <section class="bg-cocoBeige">
+        <div class="mx-auto max-w-6xl px-4 pb-16">
+          <div class="grid gap-8 lg:grid-cols-[1fr_1fr]">
+            <!-- Left Column: Product Cards -->
+            <div class="space-y-6">
+              <!-- Product 1: Mysti CoCo Virgin Coconut Oil -->
+              <article
+                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                onclick="showProductDetails('mysticoco')"
+              >
+                <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
+                  <img
+                    src="assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
+                    alt="Mysti CoCo Virgin Coconut Oil"
+                    class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
+                  />
+                </div>
+
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-emerald-900">
+                    Mysti CoCo Virgin Coconut Oil
+                  </h3>
+                  <p class="mt-2 text-sm text-slate-600">
+                    Everyday multi-use virgin coconut oil for cooking, hair, skin
+                    and wellness.
+                  </p>
+
+                  <div class="mt-3">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">
+                      Sizes
+                    </p>
+                    <div class="mt-2 flex flex-wrap gap-2">
+                      <button
+                        class="rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                      >
+                        100 ml
+                      </button>
+                      <button
+                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                      >
+                        200 ml
+                      </button>
+                      <button
+                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                      >
+                        500 ml
+                      </button>
+                      <button
+                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                      >
+                        1 LTR
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 2: Coco Care - Baby Oil -->
+              <article
+                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                onclick="showProductDetails('cococare')"
+              >
+                <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
+                  <img
+                    src="assets/images/HAIR.jpg"
+                    alt="Coco Care Baby Oil"
+                    class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
+                  />
+                </div>
+
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-emerald-900">
+                    Coco Care – Baby Oil
+                  </h3>
+                  <p class="mt-2 text-sm text-slate-600">
+                    Gentle virgin coconut-based baby oil for massage and soft,
+                    nourished skin.*
+                  </p>
+
+                  <div class="mt-3">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">
+                      Sizes
+                    </p>
+                    <div class="mt-2 flex flex-wrap gap-2">
+                      <button
+                        class="rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                      >
+                        100 ml
+                      </button>
+                      <button
+                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                      >
+                        200 ml
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Product 3: Coco Thera -->
+              <article
+                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                onclick="showProductDetails('cocothera')"
+              >
+                <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
+                  <img
+                    src="assets/images/WELLNESS.jpg"
+                    alt="Coco Thera"
+                    class="h-full w-full object-cover scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
+                  />
+                </div>
+
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-emerald-900">
+                    Coco Thera
+                  </h3>
+                  <p class="mt-2 text-sm text-slate-600">
+                    Therapeutic coconut-based blend designed for targeted massage
+                    and relaxation.
+                  </p>
+
+                  <div class="mt-3">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-amber-700">
+                      Sizes
+                    </p>
+                    <div class="mt-2 flex flex-wrap gap-2">
+                      <button
+                        class="rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                      >
+                        100 ml
+                      </button>
+                      <button
+                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                      >
+                        200 ml
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Product Details -->
+            <div class="lg:sticky lg:top-24 lg:h-fit">
+              <!-- Mysti CoCo Details -->
+              <div
+                id="mysticoco-details"
+                class="rounded-3xl bg-white p-6 shadow-soft-xl ring-1 ring-emerald-50"
+              >
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.20em] text-amber-700"
                 >
-                  Buy now on WhatsApp
-                </a>
-                <a
-                  href="https://www.amazon.in/Mysti-Coco-Virgin-Coconut-Oil/dp/B08FD9CT99"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center rounded-full border border-cocoGreen px-5 py-2 text-xs font-semibold text-cocoGreen hover:bg-white"
+                  Product Details
+                </p>
+                <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
+                  Mysti CoCo Virgin Coconut Oil – 100 ml
+                </h2>
+                <p class="mt-3 text-sm text-slate-700">
+                  Multi-use virgin coconut oil extracted from fresh coconut milk,
+                  ideal for first-time users and travel-friendly rituals.
+                </p>
+
+                <div class="mt-5 space-y-3 text-sm">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Range</span>
+                    <span class="text-slate-700">Virgin Coconut Oil</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Pack size</span>
+                    <span class="text-slate-700">100 ml</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Skin / hair type</span>
+                    <span class="text-slate-700">All skin & hair types</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Form</span>
+                    <span class="text-slate-700">Oil</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Scent</span>
+                    <span class="text-slate-700">Natural coconut</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-5 rounded-2xl bg-emerald-50/70 p-4 text-xs text-slate-700"
                 >
-                  View on Amazon
-                </a>
+                  <p class="font-semibold text-emerald-800">Note</p>
+                  <p class="mt-1">
+                    *Always patch-test on skin and consult your doctor before using
+                    on babies, sensitive skin or if you have specific medical
+                    conditions.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <a
+                    href="index.html#contact"
+                    class="block w-full rounded-full bg-emerald-700 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-emerald-800 hover:-translate-y-0.5"
+                  >
+                    Contact for availability
+                  </a>
+                </div>
               </div>
-              <p class="mt-2 text-[11px] text-slate-500">
-                Note: Update WhatsApp number and pricing once finalised.
-              </p>
+
+              <!-- Coco Care Details (hidden by default) -->
+              <div
+                id="cococare-details"
+                class="hidden rounded-3xl bg-white p-6 shadow-soft-xl ring-1 ring-emerald-50"
+              >
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.20em] text-amber-700"
+                >
+                  Product Details
+                </p>
+                <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
+                  Coco Care – Baby Oil – 100 ml
+                </h2>
+                <p class="mt-3 text-sm text-slate-700">
+                  Gentle virgin coconut-based baby oil for massage and soft,
+                  nourished skin. Specially formulated for delicate baby skin.
+                </p>
+
+                <div class="mt-5 space-y-3 text-sm">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Range</span>
+                    <span class="text-slate-700">Baby Care</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Pack size</span>
+                    <span class="text-slate-700">100 ml</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Skin type</span>
+                    <span class="text-slate-700">Baby & sensitive skin</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Form</span>
+                    <span class="text-slate-700">Oil</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Scent</span>
+                    <span class="text-slate-700">Mild coconut</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-5 rounded-2xl bg-emerald-50/70 p-4 text-xs text-slate-700"
+                >
+                  <p class="font-semibold text-emerald-800">Important</p>
+                  <p class="mt-1">
+                    Always patch-test on a small area first. Consult your
+                    pediatrician before using on newborns or if your baby has
+                    sensitive skin or medical conditions.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <a
+                    href="index.html#contact"
+                    class="block w-full rounded-full bg-emerald-700 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-emerald-800 hover:-translate-y-0.5"
+                  >
+                    Contact for availability
+                  </a>
+                </div>
+              </div>
+
+              <!-- Coco Thera Details (hidden by default) -->
+              <div
+                id="cocothera-details"
+                class="hidden rounded-3xl bg-white p-6 shadow-soft-xl ring-1 ring-emerald-50"
+              >
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.20em] text-amber-700"
+                >
+                  Product Details
+                </p>
+                <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
+                  Coco Thera – 100 ml
+                </h2>
+                <p class="mt-3 text-sm text-slate-700">
+                  Therapeutic coconut-based blend designed for targeted massage and
+                  relaxation. Ideal for deep tissue and aromatherapy routines.
+                </p>
+
+                <div class="mt-5 space-y-3 text-sm">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Range</span>
+                    <span class="text-slate-700">Therapeutic</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Pack size</span>
+                    <span class="text-slate-700">100 ml</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Use</span>
+                    <span class="text-slate-700">Massage & relaxation</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Form</span>
+                    <span class="text-slate-700">Oil blend</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Scent</span>
+                    <span class="text-slate-700">Herbal coconut</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-5 rounded-2xl bg-emerald-50/70 p-4 text-xs text-slate-700"
+                >
+                  <p class="font-semibold text-emerald-800">Usage</p>
+                  <p class="mt-1">
+                    Suitable for external massage use. Avoid contact with eyes. If
+                    you have allergies or skin conditions, consult a healthcare
+                    professional before use.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <a
+                    href="index.html#contact"
+                    class="block w-full rounded-full bg-emerald-700 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-emerald-800 hover:-translate-y-0.5"
+                  >
+                    Contact for availability
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Product grid: 3 product families, Amazon-style info panel -->
-    <section class="fade-section bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-semibold text-cocoGreen">Choose Your Mysti CoCo</h2>
-        <p class="mt-2 text-sm text-slate-700">
-          Three simple ranges, multiple pack sizes – all crafted from our virgin coconut goodness.
+    <footer class="border-t border-emerald-50 bg-cocoBeige/90">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-4 text-xs text-slate-500 sm:flex-row"
+      >
+        <p>
+          ©
+          <span id="yearSpan"></span>
+          Mysti CoCo. All rights reserved.
         </p>
-
-        <div class="mt-8 grid gap-6 lg:grid-cols-[2fr,1.4fr] items-start">
-          <!-- Left: product cards -->
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
-            <!-- Product 1: Virgin Coconut Oil -->
-            <article
-              class="group rounded-3xl border border-cocoBeige bg-cocoBeige/30 p-5 shadow-sm hover:border-cocoGreen hover:bg-white hover:shadow-md cursor-pointer"
-              data-product="vco"
-            >
-              <div class="flex gap-4">
-                <div class="hidden h-24 w-24 overflow-hidden rounded-2xl bg-white/70 sm:block">
-                  <img
-                    src="./assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
-                    alt="Mysti CoCo Virgin Coconut Oil"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="flex-1 space-y-1">
-                  <h3 class="text-sm font-semibold text-cocoGreen">
-                    Mysti CoCo Virgin Coconut Oil
-                  </h3>
-                  <p class="text-xs text-slate-700">
-                    Everyday multi‑use virgin coconut oil for cooking, hair, skin and wellness.
-                  </p>
-                  <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-cocoBrown">
-                    Sizes
-                  </p>
-                  <div class="flex flex-wrap gap-2 text-[11px]">
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1 pill-selected" data-product="vco" data-size="100 ml">100 ml</button>
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="vco" data-size="200 ml">200 ml</button>
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="vco" data-size="500 ml">500 ml</button>
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="vco" data-size="1 LTR">1 LTR</button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Product 2: Coco Care Baby Oil -->
-            <article
-              class="group rounded-3xl border border-cocoBeige bg-cocoBeige/30 p-5 shadow-sm hover:border-cocoGreen hover:bg-white hover:shadow-md cursor-pointer"
-              data-product="baby"
-            >
-              <div class="flex gap-4">
-                <div class="hidden h-24 w-24 overflow-hidden rounded-2xl bg-white/70 sm:block">
-                  <!-- Use baby‑focused image when you have it -->
-                  <img
-                    src="./assets/images/SKIN.jpg"
-                    alt="Coco Care Baby Oil"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="flex-1 space-y-1">
-                  <h3 class="text-sm font-semibold text-cocoGreen">
-                    Coco Care – Baby Oil
-                  </h3>
-                  <p class="text-xs text-slate-700">
-                    Gentle virgin coconut‑based baby oil for massage and soft, nourished skin.*
-                  </p>
-                  <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-cocoBrown">
-                    Sizes
-                  </p>
-                  <div class="flex flex-wrap gap-2 text-[11px]">
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="baby" data-size="100 ml">100 ml</button>
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="baby" data-size="200 ml">200 ml</button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Product 3: Coco Thera -->
-            <article
-              class="group rounded-3xl border border-cocoBeige bg-cocoBeige/30 p-5 shadow-sm hover:border-cocoGreen hover:bg-white hover:shadow-md cursor-pointer"
-              data-product="thera"
-            >
-              <div class="flex gap-4">
-                <div class="hidden h-24 w-24 overflow-hidden rounded-2xl bg-white/70 sm:block">
-                  <!-- Use more therapeutic / spa image later -->
-                  <img
-                    src="./assets/images/WELLNESS.jpg"
-                    alt="Coco Thera oil"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="flex-1 space-y-1">
-                  <h3 class="text-sm font-semibold text-cocoGreen">
-                    Coco Thera
-                  </h3>
-                  <p class="text-xs text-slate-700">
-                    Therapeutic coconut‑based blend designed for targeted massage and relaxation.
-                  </p>
-                  <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-cocoBrown">
-                    Sizes
-                  </p>
-                  <div class="flex flex-wrap gap-2 text-[11px]">
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="thera" data-size="100 ml">100 ml</button>
-                    <button class="size-pill rounded-full border border-cocoGreen px-3 py-1" data-product="thera" data-size="200 ml">200 ml</button>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Right: details panel (changes text when you click cards/sizes) -->
-          <aside class="rounded-3xl bg-cocoBeige/60 p-6 shadow-sm text-sm text-slate-800" id="details-panel">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cocoBrown">
-              Product details
-            </p>
-            <h3 class="mt-2 text-lg font-semibold text-cocoGreen" id="details-title">
-              Mysti CoCo Virgin Coconut Oil – 100 ml
-            </h3>
-            <p class="mt-2 text-xs text-slate-700" id="details-subtitle">
-              Multi‑use virgin coconut oil extracted from fresh coconut milk, ideal for first‑time users and travel‑friendly rituals.
-            </p>
-
-            <dl class="mt-4 space-y-1 text-xs text-slate-700">
-              <div class="flex justify-between gap-3">
-                <dt class="font-semibold text-cocoGreen">Range</dt>
-                <dd id="details-range" class="text-right">Virgin Coconut Oil</dd>
-              </div>
-              <div class="flex justify-between gap-3">
-                <dt class="font-semibold text-cocoGreen">Pack size</dt>
-                <dd id="details-size" class="text-right">100 ml</dd>
-              </div>
-              <div class="flex justify-between gap-3">
-                <dt class="font-semibold text-cocoGreen">Skin / hair type</dt>
-                <dd id="details-type" class="text-right">All skin & hair types</dd>
-              </div>
-              <div class="flex justify-between gap-3">
-                <dt class="font-semibold text-cocoGreen">Form</dt>
-                <dd id="details-form" class="text-right">Oil</dd>
-              </div>
-              <div class="flex justify-between gap-3">
-                <dt class="font-semibold text-cocoGreen">Scent</dt>
-                <dd id="details-scent" class="text-right">Natural coconut</dd>
-              </div>
-            </dl>
-
-            <p class="mt-4 text-[11px] text-slate-600" id="details-note">
-              *Always patch‑test on skin and consult your doctor before using on babies, sensitive skin or if you have specific medical conditions.
-            </p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- How to Use (same as earlier) -->
-    <section class="fade-section bg-cocoBeige/60">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-semibold text-cocoGreen">How to Use Mysti CoCo</h2>
-        <p class="mt-2 text-sm text-slate-700">
-          Always patch‑test on skin and follow your doctor’s advice, especially for babies and sensitive skin.
+        <p class="text-[11px]">
+          Imagery and descriptions are for representation only. Product details,
+          pricing, and availability are subject to change.
         </p>
-
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <div class="space-y-3 rounded-3xl bg-white p-5 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Cooking</h3>
-            <p class="text-xs text-slate-700">
-              Use a spoonful for sautéing, tempering or baking where you would normally use cooking oil, for a gentle coconut aroma and light finish.
-            </p>
-          </div>
-          <div class="space-y-3 rounded-3xl bg-white p-5 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Hair</h3>
-            <p class="text-xs text-slate-700">
-              Warm slightly and massage into the scalp and hair lengths 30–45 minutes before washing for a soft, nourished finish and natural shine.
-            </p>
-          </div>
-          <div class="space-y-3 rounded-3xl bg-white p-5 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Skin</h3>
-            <p class="text-xs text-slate-700">
-              Apply a thin layer on slightly damp skin after a shower to lock in moisture, or use as an overnight hand and foot mask on dry areas.
-            </p>
-          </div>
-          <div class="space-y-3 rounded-3xl bg-white p-5 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Baby Care*</h3>
-            <p class="text-xs text-slate-700">
-              For baby massage, always consult your paediatrician and test on a small patch first. Discontinue if any redness or irritation appears.
-            </p>
-          </div>
-        </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- FAQ (unchanged) -->
-    <section class="fade-section bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-semibold text-cocoGreen">Frequently Asked Questions</h2>
+    <script>
+      document.getElementById("yearSpan").textContent =
+        new Date().getFullYear();
 
-        <div class="mt-6 space-y-4 text-sm text-slate-800">
-          <details class="rounded-2xl bg-cocoBeige/40 p-4 shadow-sm">
-            <summary class="cursor-pointer font-semibold text-cocoGreen">
-              Is this oil edible?
-            </summary>
-            <p class="mt-2 text-xs text-slate-700">
-              Mysti CoCo virgin coconut milk oil is intended for edible use. Always follow the directions on your product label and consult your healthcare provider if you have dietary concerns.
-            </p>
-          </details>
+      function showProductDetails(productId) {
+        // Hide all detail sections
+        document.getElementById("mysticoco-details").classList.add("hidden");
+        document.getElementById("cococare-details").classList.add("hidden");
+        document.getElementById("cocothera-details").classList.add("hidden");
 
-          <details class="rounded-2xl bg-cocoBeige/40 p-4 shadow-sm">
-            <summary class="cursor-pointer font-semibold text-cocoGreen">
-              How should I store the oil?
-            </summary>
-            <p class="mt-2 text-xs text-slate-700">
-              Store in a cool, dry place away from direct sunlight with the cap tightly closed. Coconut oil may solidify in cooler temperatures; this is natural. Liquify by placing the bottle in warm water.
-            </p>
-          </details>
-
-          <details class="rounded-2xl bg-cocoBeige/40 p-4 shadow-sm">
-            <summary class="cursor-pointer font-semibold text-cocoGreen">
-              What is the shelf life?
-            </summary>
-            <p class="mt-2 text-xs text-slate-700">
-              Please refer to the “Best before” date printed on each bottle. Update this answer with exact shelf‑life once your packaging is final.
-            </p>
-          </details>
-
-          <details class="rounded-2xl bg-cocoBeige/40 p-4 shadow-sm">
-            <summary class="cursor-pointer font-semibold text-cocoGreen">
-              Is it safe for sensitive skin?
-            </summary>
-            <p class="mt-2 text-xs text-slate-700">
-              Many people with dry or sensitive skin enjoy coconut oil, but reactions are individual. Patch‑test on the inner arm, wait 24 hours, and discontinue use if irritation occurs.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Contact / Footer -->
-  <footer id="contact" class="border-t border-slate-100 bg-cocoBeige/60">
-    <div class="mx-auto max-w-6xl px-4 py-8">
-      <div class="grid gap-6 md:grid-cols-3">
-        <div>
-          <h3 class="text-sm font-semibold text-cocoGreen">Mysti CoCo</h3>
-          <p class="mt-2 text-xs text-slate-700">
-            Official shop page for Mysti CoCo Virgin Coconut Milk Oil and Coco Care ranges.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold text-cocoGreen">Contact</h4>
-          <p class="mt-2 text-xs text-slate-700">
-            Phone / WhatsApp: +91‑XXXXXXXXXX<br />
-            Email: hello@mysticoco.in<br />
-            Location: City, State
-          </p>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold text-cocoGreen">Support</h4>
-          <p class="mt-2 text-xs text-slate-700">
-            For bulk or distributor enquiries, please reach out via email.
-          </p>
-        </div>
-      </div>
-      <p class="mt-6 text-center text-[11px] text-slate-500">
-        © <span id="year"></span> Mysti CoCo. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    // Simple mobile nav toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
-
-    if (btn) {
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        iconOpen.classList.toggle('hidden');
-        iconClose.classList.toggle('hidden');
-      });
-    }
-
-    // Details panel behavior (very lightweight, no framework)
-    const detailsMap = {
-      vco: {
-        range: 'Virgin Coconut Oil',
-        baseSubtitle: 'Multi‑use virgin coconut oil extracted from fresh coconut milk, ideal for everyday cooking, hair and skin rituals.',
-      },
-      baby: {
-        range: 'Coco Care – Baby Oil',
-        baseSubtitle: 'Gentle coconut‑based baby massage oil created for soft, nourished skin.*',
-      },
-      thera: {
-        range: 'Coco Thera',
-        baseSubtitle: 'Therapeutic coconut‑based blend designed for relaxation and focused massage.',
-      },
-    };
-
-    const titleEl = document.getElementById('details-title');
-    const subtitleEl = document.getElementById('details-subtitle');
-    const rangeEl = document.getElementById('details-range');
-    const sizeEl = document.getElementById('details-size');
-    const typeEl = document.getElementById('details-type');
-    const formEl = document.getElementById('details-form');
-    const scentEl = document.getElementById('details-scent');
-    const noteEl = document.getElementById('details-note');
-
-    function updateDetails(productKey, size) {
-      const data = detailsMap[productKey];
-      if (!data) return;
-
-      rangeEl.textContent = data.range;
-      sizeEl.textContent = size;
-      titleEl.textContent = `${data.range} – ${size}`;
-      subtitleEl.textContent = data.baseSubtitle;
-
-      if (productKey === 'baby') {
-        typeEl.textContent = 'All baby & child skin types (patch‑test first)';
-        scentEl.textContent = 'Mild natural coconut';
-        noteEl.textContent = 'Always consult your paediatrician before using any oil on newborns or sensitive baby skin. Patch‑test and discontinue if irritation appears.';
-      } else if (productKey === 'thera') {
-        typeEl.textContent = 'All skin types (for external massage use)';
-        scentEl.textContent = 'Warm coconut, spa‑inspired';
-        noteEl.textContent = 'For external massage use only unless directed otherwise by your healthcare practitioner. Avoid broken or irritated skin.';
-      } else {
-        typeEl.textContent = 'All skin & hair types';
-        scentEl.textContent = 'Natural coconut';
-        noteEl.textContent = 'Patch‑test before first use if you have sensitive skin or allergies. Consult your doctor for therapeutic or dietary usage.';
+        // Show selected product details
+        document.getElementById(productId + "-details").classList.remove("hidden");
       }
-
-      formEl.textContent = 'Oil';
-    }
-
-    // Handle size pill clicks
-    document.querySelectorAll('.size-pill').forEach((pill) => {
-      pill.addEventListener('click', (e) => {
-        const productKey = e.currentTarget.getAttribute('data-product');
-        const size = e.currentTarget.getAttribute('data-size');
-
-        // remove selection from siblings of same product
-        document.querySelectorAll(`.size-pill[data-product="${productKey}"]`).forEach((p) => {
-          p.classList.remove('pill-selected');
-        });
-        e.currentTarget.classList.add('pill-selected');
-
-        updateDetails(productKey, size);
-      });
-    });
-
-    // Also allow clicking the whole card to switch product (keeps currently selected size)
-    document.querySelectorAll('[data-product]').forEach((card) => {
-      card.addEventListener('click', (e) => {
-        const productKey = card.getAttribute('data-product');
-        if (!detailsMap[productKey]) return;
-        const selectedPill =
-          card.querySelector('.size-pill.pill-selected') ||
-          card.querySelector('.size-pill');
-        if (!selectedPill) return;
-
-        const size = selectedPill.getAttribute('data-size');
-        updateDetails(productKey, size);
-      });
-    });
-
-    // Set year
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-
-    // Simple intersection observer for fade-in sections
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    document.querySelectorAll('.fade-section').forEach((section) => {
-      observer.observe(section);
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
-
