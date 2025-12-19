@@ -124,15 +124,12 @@
 
         <div class="mt-10 w-full md:mt-0 md:w-1/2">
           <div class="relative mx-auto max-w-md">
-            <div class="aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-cocoGreenLight/10 via-white to-cocoBrown/10 shadow-lg">
-              <!-- Replace with real image later -->
-              <div class="flex h-full flex-col items-center justify-center gap-3 px-6 text-center">
-                <div class="h-20 w-20 rounded-full bg-cocoGreenLight/30"></div>
-                <h2 class="text-lg font-semibold text-cocoGreen">Mysti CoCo Bottle</h2>
-                <p class="text-xs text-slate-600">
-                  Placeholder product visual. Replace with actual brand bottle image from your assets.
-                </p>
-              </div>
+            <div class="aspect-[4/5] overflow-hidden rounded-3xl shadow-lg">
+              <img
+                src="./assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
+                alt="Mysti CoCo virgin coconut oil bottle on moss"
+                class="h-full w-full object-cover"
+              />
             </div>
             <div class="absolute -bottom-4 -right-6 rounded-2xl bg-white px-4 py-3 text-xs shadow-lg">
               <p class="font-semibold text-cocoGreen">Everyday Ritual</p>
@@ -159,7 +156,13 @@
           </ul>
         </div>
         <div class="flex items-center justify-center">
-          <div class="h-52 w-full max-w-sm rounded-3xl bg-cocoBeige shadow-inner"></div>
+          <div class="h-64 w-full max-w-sm overflow-hidden rounded-3xl shadow-inner">
+            <img
+              src="./assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.jpg"
+              alt="Pure cold‑pressed virgin coconut oil in a coconut"
+              class="h-full w-full object-cover scale-125"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -207,7 +210,13 @@
                 </div>
               </div>
               <div class="mt-4 w-full md:mt-0 md:w-48">
-                <div class="aspect-[3/5] rounded-2xl bg-cocoGreenLight/15"></div>
+                <div class="aspect-[3/5] overflow-hidden rounded-2xl bg-cocoGreenLight/10">
+                  <img
+                    src="./assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
+                    alt="Mysti CoCo bottle product shot"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -215,10 +224,11 @@
           <div class="space-y-4 rounded-3xl bg-white p-6 shadow-sm">
             <h4 class="text-sm font-semibold text-cocoGreen">Everyday benefits</h4>
             <ul class="space-y-1 text-sm text-slate-700">
-              <li>• Supports healthy digestion when consumed in moderation.</li>
-              <li>• Nourishes scalp and helps reduce dryness.</li>
-              <li>• Deep moisturiser for skin elbows, knees and lips.</li>
-              <li>• Gentle option for baby massage when recommended by a doctor.</li>
+              <li>• Supports healthy digestion when consumed in moderation as part of your daily meals.</li>
+              <li>• Nourishes scalp and helps reduce dryness, flakiness and dullness over time.</li>
+              <li>• Deep moisturiser for skin on elbows, knees, heels and lips, especially in dry weather.</li>
+              <li>• Gentle option for baby massage when recommended by a doctor and patch‑tested on skin.</li>
+              <li>• Versatile oil that moves effortlessly between kitchen, haircare and skincare rituals.</li>
             </ul>
           </div>
         </div>
@@ -235,21 +245,39 @@
 
         <div class="mt-8 grid gap-6 md:grid-cols-3">
           <div class="rounded-3xl border border-cocoBeige bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div class="mx-auto mb-3 h-10 w-10 rounded-full bg-cocoGreenLight/20"></div>
+            <div class="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
+              <img
+                src="./assets/images/SKIN.jpg"
+                alt="Coconut oil on glowing skin"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <h3 class="text-sm font-semibold text-cocoGreen">Skin</h3>
             <p class="mt-2 text-xs text-slate-700">
               Locks in moisture and leaves skin soft and dewy when used as a body oil or overnight mask.
             </p>
           </div>
           <div class="rounded-3xl border border-cocoBeige bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div class="mx-auto mb-3 h-10 w-10 rounded-full bg-cocoGreenLight/20"></div>
+            <div class="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
+              <img
+                src="./assets/images/HAIR.jpg"
+                alt="Coconut oil nourishing hair"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <h3 class="text-sm font-semibold text-cocoGreen">Hair</h3>
             <p class="mt-2 text-xs text-slate-700">
               Nourishes scalp, helps reduce dryness and adds shine when used as a pre‑wash massage oil.
             </p>
           </div>
           <div class="rounded-3xl border border-cocoBeige bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div class="mx-auto mb-3 h-10 w-10 rounded-full bg-cocoGreenLight/20"></div>
+            <div class="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
+              <img
+                src="./assets/images/WELLNESS.jpg"
+                alt="Wellness ritual with coconut oil"
+                class="h-full w-full object-cover scale-150"
+              />
+            </div>
             <h3 class="text-sm font-semibold text-cocoGreen">Wellness</h3>
             <p class="mt-2 text-xs text-slate-700">
               A teaspoon in your daily routine can support balanced energy and gentle nourishment from within.
@@ -269,26 +297,61 @@
 
         <div class="mt-8 grid gap-6 md:grid-cols-5">
           <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
+            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
+              <img
+                src="./assets/images/TREES.jpg"
+                alt="Coconut trees in tropical farm"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 1</p>
             <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Coconut Tree</h3>
             <p class="mt-2 text-xs text-slate-700">Hand‑picked mature coconuts from trusted farms.</p>
           </div>
           <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
+            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
+              <img
+                src="./assets/images/HARVESTING.jpg"
+                alt="Harvesting coconuts by hand"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 2</p>
             <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Harvesting</h3>
             <p class="mt-2 text-xs text-slate-700">Freshly harvested and quickly processed to retain goodness.</p>
           </div>
           <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
+            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
+              <img
+                src="./assets/images/COLD-PRESSING.jpg"
+                alt="Cold pressing fresh coconut"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 3</p>
             <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Cold‑Pressing</h3>
             <p class="mt-2 text-xs text-slate-700">Coconut milk is gently cold‑pressed into pure oil.</p>
           </div>
           <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
+            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
+              <img
+                src="./assets/images/PACKAGING.jpg"
+                alt="Packaging coconut oil bottles"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 4</p>
             <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Packaging</h3>
             <p class="mt-2 text-xs text-slate-700">Bottled in food‑grade containers with minimal handling.</p>
           </div>
           <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
+            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
+              <img
+                src="./assets/images/DOOR-STEP.jpg"
+                alt="Doorstep delivery with a smile"
+                class="h-full w-full object-cover"
+              />
+            </div>
             <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 5</p>
             <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Doorstep</h3>
             <p class="mt-2 text-xs text-slate-700">Delivered fresh to your home, ready for your rituals.</p>
@@ -315,13 +378,27 @@
           <div class="space-y-4">
             <h3 class="text-sm font-semibold text-cocoGreen">Farmer Stories</h3>
             <div class="grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl bg-cocoBeige/60 p-4 text-xs text-slate-700">
-                <p class="font-semibold text-cocoGreen">Coastal Farm</p>
-                <p class="mt-1">Placeholder story for a family‑run coconut farm by the coast.</p>
+              <div class="overflow-hidden rounded-2xl bg-cocoBeige/60">
+                <img
+                  src="./assets/images/HARVESTING.jpg"
+                  alt="Local farmers harvesting coconuts"
+                  class="h-28 w-full object-cover"
+                />
+                <div class="p-4 text-xs text-slate-700">
+                  <p class="font-semibold text-cocoGreen">Coastal Farm</p>
+                  <p class="mt-1">Family‑run coconut groves nurtured along the coast.</p>
+                </div>
               </div>
-              <div class="rounded-2xl bg-cocoBeige/60 p-4 text-xs text-slate-700">
-                <p class="font-semibold text-cocoGreen">High‑Quality Harvest</p>
-                <p class="mt-1">Small batches, carefully selected coconuts for every bottle.</p>
+              <div class="overflow-hidden rounded-2xl bg-cocoBeige/60">
+                <img
+                  src="./assets/images/TREES.jpg"
+                  alt="Coconut groves cared for by farmers"
+                  class="h-28 w-full object-cover"
+                />
+                <div class="p-4 text-xs text-slate-700">
+                  <p class="font-semibold text-cocoGreen">High‑Quality Harvest</p>
+                  <p class="mt-1">Small batches, carefully selected coconuts for every bottle.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -425,3 +502,4 @@
   <script src="./scripts/main.js"></script>
 </body>
 </html>
+
