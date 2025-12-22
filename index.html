@@ -1,505 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mysti CoCo – Nature’s Essence, Bottled Fresh</title>
-  <meta name="description" content="Mysti CoCo Virgin Coconut Milk Oil – purity, sustainability and wellness in every drop." />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mysti CoCo | Virgin Coconut Milk Oil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Tailwind via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cocoGreen: '#2F7A4A',
-            cocoGreenLight: '#4FAF70',
-            cocoBrown: '#8B5A2B',
-            cocoBeige: '#F4EEE4',
-          },
-          fontFamily: {
-            sans: ['Poppins', 'system-ui', 'sans-serif'],
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "sans-serif"],
+            },
+            colors: {
+              cocoGreen: "#1F7A3D",
+              cocoBeige: "#F8F3E9",
+              cocoGold: "#C9A24B",
+            },
+            boxShadow: {
+              "soft-xl": "0 28px 60px rgba(15, 23, 42, 0.18)",
+              "lift-card": "0 18px 40px rgba(15, 23, 42, 0.16)",
+            },
           },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .fade-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-</head>
-<body class="bg-white font-sans text-slate-800">
-  <!-- Header / Nav -->
-  <header class="sticky top-0 z-20 bg-white/90 backdrop-blur shadow-sm">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="./index.html" class="flex items-center gap-2">
-        <span class="inline-block rounded-full bg-cocoGreen px-3 py-1 text-sm font-semibold text-white">Mysti</span>
-        <span class="text-xl font-semibold text-cocoGreen">CoCo</span>
-      </a>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-      <!-- Desktop nav -->
-      <nav class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
-        <a href="#top" class="hover:text-cocoGreen">Home</a>
-        <a href="./shop.html" class="hover:text-cocoGreen">Shop</a>
-        <a href="#about" class="hover:text-cocoGreen">About</a>
-        <a href="#products" class="hover:text-cocoGreen">Products</a>
-        <a href="#contact" class="hover:text-cocoGreen">Contact</a>
+  <body class="min-h-screen bg-cocoBeige font-sans text-slate-800">
+    <!-- Navbar -->
+    <header
+      class="sticky top-0 z-20 bg-cocoBeige/95 backdrop-blur border-b border-emerald-50"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
+        <a href="#top" class="flex items-center gap-2">
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-700 text-lg font-semibold text-white shadow-md"
+          >
+            M
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-base font-semibold text-emerald-900">
+              Mysti CoCo
+            </span>
+            <span class="text-xs text-slate-500">
+              Virgin Coconut Milk Oil
+            </span>
+          </div>
+        </a>
+
+        <div
+          class="hidden items-center gap-6 text-sm font-medium text-slate-700 sm:flex"
+        >
+          <a href="#about" class="hover:text-emerald-700">About</a>
+          <a href="#benefits" class="hover:text-emerald-700">Benefits</a>
+          <a href="shop.html" class="hover:text-emerald-700">Shop</a>
+          <a href="#contact" class="hover:text-emerald-700">Contact</a>
+        </div>
       </nav>
+    </header>
 
-      <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="inline-flex items-center justify-center rounded-md p-2 text-cocoGreen md:hidden" aria-label="Open main menu">
-        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile nav -->
-    <nav id="mobile-menu" class="hidden border-t border-slate-100 bg-white md:hidden">
-      <div class="mx-auto flex max-w-6xl flex-col px-4 py-3 text-sm font-medium text-slate-700">
-        <a href="#top" class="py-1 hover:text-cocoGreen">Home</a>
-        <a href="./shop.html" class="py-1 hover:text-cocoGreen">Shop</a>
-        <a href="#about" class="py-1 hover:text-cocoGreen">About</a>
-        <a href="#products" class="py-1 hover:text-cocoGreen">Products</a>
-        <a href="#contact" class="py-1 hover:text-cocoGreen">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="top">
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-cocoBeige">
-      <div class="mx-auto flex max-w-6xl flex-col items-center px-4 py-16 md:flex-row md:py-20">
-        <div class="relative z-10 w-full space-y-6 md:w-1/2">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cocoBrown">
-            Virgin Coconut Milk Oil
-          </p>
-          <h1 class="text-3xl font-semibold leading-tight text-cocoGreen sm:text-4xl md:text-5xl">
-            Nature’s Essence,<br />Bottled Fresh.
-          </h1>
-          <p class="max-w-md text-sm text-slate-700 md:text-base">
-            Mysti CoCo brings you cold‑pressed virgin coconut milk oil crafted for cooking, skin, hair and complete wellness, with a focus on purity, sustainability and local farmers.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <a href="./shop.html" class="inline-flex items-center rounded-full bg-cocoGreen px-6 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cocoGreenLight">
-              Shop Mysti CoCo
-            </a>
-            <a href="#journey" class="inline-flex items-center rounded-full border border-cocoGreen px-6 py-2 text-sm font-semibold text-cocoGreen hover:bg-white">
-              Know the Journey
-            </a>
-          </div>
-          <div class="flex items-center gap-4 pt-3 text-xs text-slate-600">
-            <span class="flex items-center gap-1">
-              <span class="h-2 w-2 rounded-full bg-cocoGreen"></span> Cold‑pressed
-            </span>
-            <span class="flex items-center gap-1">
-              <span class="h-2 w-2 rounded-full bg-cocoGreen"></span> No additives
-            </span>
-            <span class="flex items-center gap-1">
-              <span class="h-2 w-2 rounded-full bg-cocoGreen"></span> From fresh coconut milk
-            </span>
-          </div>
-        </div>
-
-        <div class="mt-10 w-full md:mt-0 md:w-1/2">
-          <div class="relative mx-auto max-w-md">
-            <div class="aspect-[4/5] overflow-hidden rounded-3xl shadow-lg">
-              <img
-                src="./assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
-                alt="Mysti CoCo virgin coconut oil bottle on moss"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <div class="absolute -bottom-4 -right-6 rounded-2xl bg-white px-4 py-3 text-xs shadow-lg">
-              <p class="font-semibold text-cocoGreen">Everyday Ritual</p>
-              <p class="text-slate-600">Just a teaspoon a day for inside‑out nourishment.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Purity & Story -->
-    <section id="about" class="fade-section bg-white">
-      <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2">
-        <div class="space-y-4">
-          <h2 class="text-2xl font-semibold text-cocoGreen">Pure. Cold‑Pressed. Honest.</h2>
-          <p class="text-sm text-slate-700">
-            Mysti CoCo is crafted from fresh coconut milk, gently cold‑pressed to protect natural MCTs, antioxidants and the signature coconut aroma.
-          </p>
-          <ul class="space-y-2 text-sm text-slate-700">
-            <li>• Cold‑pressed from fresh coconut milk.</li>
-            <li>• No additives, mineral oils or preservatives.</li>
-            <li>• Small‑batch process to retain aroma and nutrients.</li>
-            <li>• Versatile – from kitchen to hair and skin rituals.</li>
-          </ul>
-        </div>
-        <div class="flex items-center justify-center">
-          <div class="h-64 w-full max-w-sm overflow-hidden rounded-3xl shadow-inner">
-            <img
-              src="./assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.jpg"
-              alt="Pure cold‑pressed virgin coconut oil in a coconut"
-              class="h-full w-full object-cover scale-125"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Showcase -->
-    <section id="products" class="fade-section bg-cocoBeige/60">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <div class="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+    <main id="top">
+      <!-- Hero -->
+      <section class="bg-cocoBeige">
+        <div
+          class="mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-8 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:items-center md:pt-12"
+        >
+          <!-- Left hero copy -->
           <div>
-            <h2 class="text-2xl font-semibold text-cocoGreen">Our Signature Product</h2>
-            <p class="mt-1 text-sm text-slate-700">
-              We’ll add more Mysti CoCo products here later. For now, this is the hero of the range.
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.20em] text-emerald-700"
+            >
+              NATURE’S ESSENCE, BOTTLED FRESH
             </p>
-          </div>
-          <a href="./shop.html" class="text-sm font-semibold text-cocoGreen underline-offset-4 hover:underline">
-            View full product details
-          </a>
-        </div>
 
-        <div class="grid gap-6 md:grid-cols-[2fr_1.2fr]">
-          <div class="rounded-3xl bg-white p-6 shadow-sm">
-            <div class="flex flex-col gap-4 md:flex-row">
-              <div class="flex-1 space-y-2">
-                <h3 class="text-lg font-semibold text-cocoGreen">
-                  Mysti CoCo Virgin Coconut Milk Oil – 500 ml
-                </h3>
-                <p class="text-sm text-slate-700">
-                  A single, versatile oil for cooking, hair, skin and everyday wellness. Cold‑pressed from coconut milk for a lighter texture and richer aroma.
-                </p>
-                <ul class="mt-2 space-y-1 text-sm text-slate-700">
-                  <li>• Size: 500 ml bottle</li>
-                  <li>• Usage: Cooking, hair, skin, baby massage</li>
-                  <li>• Texture: Light, non‑sticky, quickly absorbed</li>
-                </ul>
-                <p class="mt-3 text-xs text-slate-500">
-                  Price: <span class="font-semibold text-cocoGreen">TBD – update with official MRP</span>
-                </p>
-                <div class="mt-4 flex flex-wrap gap-3">
-                  <a href="./shop.html" class="inline-flex items-center rounded-full bg-cocoGreen px-5 py-2 text-xs font-semibold text-white hover:bg-cocoGreenLight">
-                    View details
-                  </a>
-                  <a href="#" class="inline-flex items-center rounded-full border border-cocoGreen px-5 py-2 text-xs font-semibold text-cocoGreen hover:bg-white">
-                    Order on WhatsApp
-                  </a>
+            <h1
+              class="mt-3 text-3xl font-semibold leading-tight text-emerald-900 sm:text-4xl md:text-5xl"
+            >
+              Virgin Coconut Milk Oil
+              crafted in small batches.
+            </h1>
+
+            <p
+              class="mt-4 max-w-xl text-sm text-slate-600 sm:text-base"
+            >
+              Mysti CoCo Virgin Coconut Milk Oil is gently extracted from fresh
+              coconut milk within hours of harvest, helping preserve its
+              delicate aroma, natural goodness, and comforting richness for
+              everyday cooking, skin, and hair rituals.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a
+                href="shop.html"
+                class="inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-700/30 transition hover:bg-emerald-800 hover:shadow-lift-card hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-50"
+              >
+                Explore products
+              </a>
+
+              <a
+                href="#about"
+                class="inline-flex items-center justify-center rounded-full border border-emerald-700/70 bg-emerald-50/60 px-6 py-2.5 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-100 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-50"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+
+          <!-- Right hero image card -->
+          <div class="md:pt-2">
+            <div
+              class="group relative overflow-hidden rounded-[2.2rem] bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-950 shadow-soft-xl ring-1 ring-emerald-900/30 transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-lift-card"
+            >
+              <div
+                class="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-emerald-600/40 blur-3xl"
+              ></div>
+              <div
+                class="absolute -right-20 bottom-0 h-56 w-56 rounded-full bg-emerald-400/20 blur-3xl"
+              ></div>
+
+              <div class="relative grid gap-0 md:grid-cols-[1.05fr_0.95fr]">
+                <!-- Left text block in hero -->
+                <div class="flex flex-col justify-between p-5 sm:p-6">
+                  <div>
+                    <div
+                      class="inline-flex items-center rounded-full bg-emerald-100/90 px-3 py-1 text-[11px] font-semibold text-emerald-900 ring-1 ring-emerald-200/80"
+                    >
+                      Fresh coconut milk extraction
+                    </div>
+
+                    <h2
+                      class="mt-4 text-xl font-semibold text-white sm:text-2xl"
+                    >
+                      From tree to bottle with minimal processing.
+                    </h2>
+
+                    <p
+                      class="mt-2 text-xs text-emerald-100/90 sm:text-sm"
+                    >
+                      Crafted without copra, added chemicals, or harsh
+                      refining. Every batch is made from freshly prepared
+                      coconut milk.
+                    </p>
+                  </div>
+
+                  <dl
+                    class="mt-4 grid grid-cols-2 gap-3 text-xs text-emerald-100/90"
+                  >
+                    <div>
+                      <dt class="font-semibold text-emerald-50">Process</dt>
+                      <dd class="mt-0.5">
+                        Gently cold pressed to help preserve nutrients, medium
+                        chain triglycerides (MCTs), and natural aroma.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt class="font-semibold text-emerald-50">Uses</dt>
+                      <dd class="mt-0.5">
+                        Everyday cooking, oil pulling, pre-bath scalp massage,
+                        baby massage, and body nourishment rituals.
+                      </dd>
+                    </div>
+                  </dl>
                 </div>
-              </div>
-              <div class="mt-4 w-full md:mt-0 md:w-48">
-                <div class="aspect-[3/5] overflow-hidden rounded-2xl bg-cocoGreenLight/10">
+
+                <!-- RIGHT: image fully filling the box -->
+                <div class="relative min-h-[400px] md:min-h-full group cursor-pointer">
+                  <div class="absolute inset-0 overflow-hidden rounded-r-[2.2rem]">
                   <img
-                    src="./assets/images/Elegant-Curved-Bottle-on-Moss.jpg"
-                    alt="Mysti CoCo bottle product shot"
-                    class="h-full w-full object-cover"
+                    src="assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.jpg"
+                    alt="Mysti CoCo Virgin Coconut Milk Oil bottle on natural background"
+                    class="h-full w-full object-cover scale-125 transition-transform duration-500 ease-out group-hover:scale-[1.35] group-hover:brightness-110"
                   />
                 </div>
+                <div class="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors duration-500 rounded-r-[2.2rem]"></div>
               </div>
             </div>
           </div>
-
-          <div class="space-y-4 rounded-3xl bg-white p-6 shadow-sm">
-            <h4 class="text-sm font-semibold text-cocoGreen">Everyday benefits</h4>
-            <ul class="space-y-1 text-sm text-slate-700">
-              <li>• Supports healthy digestion when consumed in moderation as part of your daily meals.</li>
-              <li>• Nourishes scalp and helps reduce dryness, flakiness and dullness over time.</li>
-              <li>• Deep moisturiser for skin on elbows, knees, heels and lips, especially in dry weather.</li>
-              <li>• Gentle option for baby massage when recommended by a doctor and patch‑tested on skin.</li>
-              <li>• Versatile oil that moves effortlessly between kitchen, haircare and skincare rituals.</li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Health Benefits -->
-    <section class="fade-section bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-center text-2xl font-semibold text-cocoGreen">Health & Beauty Benefits</h2>
-        <p class="mt-2 text-center text-sm text-slate-700">
-          One oil, many rituals – crafted for skin, hair and everyday wellness.
-        </p>
+      <!-- About section with three circular image cards -->
+      <section id="about" class="bg-cocoBeige/90">
+        <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div class="grid gap-12 md:grid-cols-2 md:items-center">
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[0.20em] text-emerald-700"
+              >
+                About Mysti CoCo
+              </p>
+              <h2
+                class="mt-3 text-2xl font-semibold text-emerald-900 sm:text-3xl"
+              >
+                Fresh coconut milk, carefully transformed.
+              </h2>
+              <p class="mt-3 text-sm text-slate-600 sm:text-base">
+                Mysti CoCo Virgin Coconut Milk Oil is made from freshly prepared
+                coconut milk, not dried copra. The process is designed to retain
+                its gentle fragrance and natural characteristics, making it
+                suitable for both kitchen and self-care rituals.
+              </p>
+            </div>
 
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <div class="rounded-3xl border border-cocoBeige bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div class="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-              <img
-                src="./assets/images/SKIN.jpg"
-                alt="Coconut oil on glowing skin"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <h3 class="text-sm font-semibold text-cocoGreen">Skin</h3>
-            <p class="mt-2 text-xs text-slate-700">
-              Locks in moisture and leaves skin soft and dewy when used as a body oil or overnight mask.
-            </p>
+            <div class="hidden md:block"></div>
           </div>
-          <div class="rounded-3xl border border-cocoBeige bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div class="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-              <img
-                src="./assets/images/HAIR.jpg"
-                alt="Coconut oil nourishing hair"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <h3 class="text-sm font-semibold text-cocoGreen">Hair</h3>
-            <p class="mt-2 text-xs text-slate-700">
-              Nourishes scalp, helps reduce dryness and adds shine when used as a pre‑wash massage oil.
-            </p>
-          </div>
-          <div class="rounded-3xl border border-cocoBeige bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div class="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-              <img
-                src="./assets/images/WELLNESS.jpg"
-                alt="Wellness ritual with coconut oil"
-                class="h-full w-full object-cover scale-150"
-              />
-            </div>
-            <h3 class="text-sm font-semibold text-cocoGreen">Wellness</h3>
-            <p class="mt-2 text-xs text-slate-700">
-              A teaspoon in your daily routine can support balanced energy and gentle nourishment from within.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Coconut Journey -->
-    <section id="journey" class="fade-section bg-cocoBeige/60">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-center text-2xl font-semibold text-cocoGreen">The Journey of a Coconut</h2>
-        <p class="mt-2 text-center text-sm text-slate-700">
-          From tree to bottle, every step is handled with care.
-        </p>
-
-        <div class="mt-8 grid gap-6 md:grid-cols-5">
-          <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
-            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
-              <img
-                src="./assets/images/TREES.jpg"
-                alt="Coconut trees in tropical farm"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 1</p>
-            <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Coconut Tree</h3>
-            <p class="mt-2 text-xs text-slate-700">Hand‑picked mature coconuts from trusted farms.</p>
-          </div>
-          <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
-            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
-              <img
-                src="./assets/images/HARVESTING.jpg"
-                alt="Harvesting coconuts by hand"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 2</p>
-            <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Harvesting</h3>
-            <p class="mt-2 text-xs text-slate-700">Freshly harvested and quickly processed to retain goodness.</p>
-          </div>
-          <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
-            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
-              <img
-                src="./assets/images/COLD-PRESSING.jpg"
-                alt="Cold pressing fresh coconut"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 3</p>
-            <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Cold‑Pressing</h3>
-            <p class="mt-2 text-xs text-slate-700">Coconut milk is gently cold‑pressed into pure oil.</p>
-          </div>
-          <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
-            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
-              <img
-                src="./assets/images/PACKAGING.jpg"
-                alt="Packaging coconut oil bottles"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 4</p>
-            <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Packaging</h3>
-            <p class="mt-2 text-xs text-slate-700">Bottled in food‑grade containers with minimal handling.</p>
-          </div>
-          <div class="rounded-3xl bg-white p-4 text-center shadow-sm">
-            <div class="mb-2 h-20 w-full overflow-hidden rounded-2xl">
-              <img
-                src="./assets/images/DOOR-STEP.jpg"
-                alt="Doorstep delivery with a smile"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <p class="text-[10px] font-semibold uppercase tracking-wide text-cocoBrown">Step 5</p>
-            <h3 class="mt-1 text-sm font-semibold text-cocoGreen">Doorstep</h3>
-            <p class="mt-2 text-xs text-slate-700">Delivered fresh to your home, ready for your rituals.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sustainability & Farmers -->
-    <section class="fade-section bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <div class="grid gap-10 md:grid-cols-2">
-          <div class="space-y-4">
-            <h2 class="text-2xl font-semibold text-cocoGreen">Sustainable by Choice</h2>
-            <p class="text-sm text-slate-700">
-              Mysti CoCo aims to keep packaging minimal and recyclable, and to work closely with coconut‑growing communities.
-            </p>
-            <ul class="space-y-2 text-sm text-slate-700">
-              <li>• Focus on recyclable, minimal packaging where possible.</li>
-              <li>• Long‑term relationships with local farmers.</li>
-              <li>• Transparent sourcing and batch‑wise traceability (roadmap).</li>
-            </ul>
-          </div>
-          <div class="space-y-4">
-            <h3 class="text-sm font-semibold text-cocoGreen">Farmer Stories</h3>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="overflow-hidden rounded-2xl bg-cocoBeige/60">
+          <!-- Three circular image cards -->
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <!-- Skin rituals -->
+            <article
+              class="group flex flex-col items-center rounded-3xl bg-white px-5 py-6 text-center shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+              <div class="relative h-28 w-28">
                 <img
-                  src="./assets/images/HARVESTING.jpg"
-                  alt="Local farmers harvesting coconuts"
-                  class="h-28 w-full object-cover"
+                  src="assets/images/SKIN.jpg"
+                  alt="Oil used for skin care"
+                  class="h-28 w-28 rounded-full object-cover border-4 border-emerald-50 shadow-md transition-transform duration-300 group-hover:scale-105"
                 />
-                <div class="p-4 text-xs text-slate-700">
-                  <p class="font-semibold text-cocoGreen">Coastal Farm</p>
-                  <p class="mt-1">Family‑run coconut groves nurtured along the coast.</p>
-                </div>
               </div>
-              <div class="overflow-hidden rounded-2xl bg-cocoBeige/60">
+              <h3 class="mt-4 text-sm font-semibold text-emerald-900">
+                Skin rituals
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Fits into body care practices such as massage and
+                moisturisation.
+              </p>
+            </article>
+
+            <!-- Hair rituals -->
+            <article
+              class="group flex flex-col items-center rounded-3xl bg-white px-5 py-6 text-center shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+              <div class="relative h-28 w-28">
                 <img
-                  src="./assets/images/TREES.jpg"
-                  alt="Coconut groves cared for by farmers"
-                  class="h-28 w-full object-cover"
+                  src="assets/images/HAIR.jpg"
+                  alt="Oil used for hair care"
+                  class="h-28 w-28 rounded-full object-cover border-4 border-emerald-50 shadow-md transition-transform duration-300 group-hover:scale-105"
                 />
-                <div class="p-4 text-xs text-slate-700">
-                  <p class="font-semibold text-cocoGreen">High‑Quality Harvest</p>
-                  <p class="mt-1">Small batches, carefully selected coconuts for every bottle.</p>
-                </div>
+              </div>
+              <h3 class="mt-4 text-sm font-semibold text-emerald-900">
+                Hair rituals
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Complements regular hair oiling and scalp massage customs.
+              </p>
+            </article>
+
+            <!-- Wellness rituals -->
+            <article
+              class="group flex flex-col items-center rounded-3xl bg-white px-5 py-6 text-center shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+            <div class="relative h-28 w-28">
+              <div class="h-28 w-28 rounded-full border-4 border-emerald-50 shadow-md overflow-hidden">
+                <img
+                  src="assets/images/WELLNESS.jpg"
+                  alt="Wellness rituals"
+                  class="h-full w-full object-cover scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
+                />
+              </div>
+            </div>
+            
+              <h3 class="mt-4 text-sm font-semibold text-emerald-900">
+                Wellness rituals
+              </h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Supports everyday wellness routines when used as part of your
+                preferred rituals.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits (Everyday uses) -->
+      <section id="benefits" class="bg-emerald-900">
+        <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div class="max-w-3xl">
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.20em] text-emerald-200"
+            >
+              Everyday uses
+            </p>
+            <h2
+              class="mt-3 text-2xl font-semibold text-emerald-50 sm:text-3xl"
+            >
+              One bottle for kitchen, skin, and hair rituals.
+            </h2>
+            <p class="mt-3 text-sm text-emerald-100/90 sm:text-base">
+              Mysti CoCo Virgin Coconut Milk Oil can be used in multiple ways at
+              home, from adding richness to meals to supporting traditional
+              self-care practices.
+            </p>
+          </div>
+
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div
+              class="group rounded-2xl bg-emerald-800/60 p-5 ring-1 ring-emerald-700/70 transition-transform duration-200 hover:-translate-y-1 hover:bg-emerald-700/70"
+            >
+              <p class="text-xs font-semibold text-emerald-50">
+                Cooking & baking
+              </p>
+              <p class="mt-2 text-sm text-emerald-100/90">
+                Use as a substitute for regular cooking oils for sautéing,
+                tempering, and light frying at home.
+              </p>
+            </div>
+            <div
+              class="group rounded-2xl bg-emerald-800/60 p-5 ring-1 ring-emerald-700/70 transition-transform duration-200 hover:-translate-y-1 hover:bg-emerald-700/70"
+            >
+              <p class="text-xs font-semibold text-emerald-50">
+                Hair & scalp
+              </p>
+              <p class="mt-2 text-sm text-emerald-100/90">
+                Apply as a pre-wash scalp and hair oil massage as part of weekly
+                care routines.
+              </p>
+            </div>
+            <div
+              class="group rounded-2xl bg-emerald-800/60 p-5 ring-1 ring-emerald-700/70 transition-transform duration-200 hover:-translate-y-1 hover:bg-emerald-700/70"
+            >
+              <p class="text-xs font-semibold text-emerald-50">
+                Skin nourishment
+              </p>
+              <p class="mt-2 text-sm text-emerald-100/90">
+                Can be used on body skin as a post-bath oil or for gentle
+                massage.
+              </p>
+            </div>
+            <div
+              class="group rounded-2xl bg-emerald-800/60 p-5 ring-1 ring-emerald-700/70 transition-transform duration-200 hover:-translate-y-1 hover:bg-emerald-700/70"
+            >
+              <p class="text-xs font-semibold text-emerald-50">
+                Traditional practices
+              </p>
+              <p class="mt-2 text-sm text-emerald-100/90">
+                May be used for routines like oil pulling or baby massage, as
+                guided by family traditions or healthcare advice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Journey of a Coconut -->
+      <section class="bg-cocoBeige">
+        <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl font-semibold text-emerald-900 sm:text-3xl">
+              The Journey of a Coconut
+            </h2>
+            <p class="mt-3 text-sm text-slate-600 sm:text-base">
+              From tree to bottle, every step is handled with care.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-5">
+            <!-- Step 1 -->
+            <article
+              class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+            <div class="mb-4 h-32 w-full rounded-2xl overflow-hidden bg-emerald-50">
+              <img
+                src="assets/images/TREES.jpg"
+                alt="Coconut trees"
+                class="h-full w-full object-cover scale-125"
+              />
+            </div>
+            
+              <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
+                STEP 1
+              </p>
+              <h3 class="mt-2 text-sm font-semibold text-emerald-900">
+                Coconut Tree
+              </h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Hand-picked mature coconuts from trusted farms.
+              </p>
+            </article>
+
+            <!-- Step 2 -->
+            <article
+              class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+              <img
+                src="assets/images/HARVESTING.jpg"
+                alt="Harvesting"
+                class="mb-4 h-32 w-full rounded-2xl object-cover"
+              />
+              <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
+                STEP 2
+              </p>
+              <h3 class="mt-2 text-sm font-semibold text-emerald-900">
+                Harvesting
+              </h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Freshly harvested and quickly processed to retain goodness.
+              </p>
+            </article>
+
+            <!-- Step 3 -->
+            <article
+              class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+            <div class="mb-4 h-32 w-full rounded-2xl overflow-hidden bg-emerald-50">
+              <img
+                src="assets/images/COLD-PRESSING.jpg"
+                alt="Cold pressing"
+                class="h-full w-full object-cover scale-125"
+              />
+            </div>
+            
+              <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
+                STEP 3
+              </p>
+              <h3 class="mt-2 text-sm font-semibold text-emerald-900">
+                Cold-Pressing
+              </h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Coconut milk is gently cold‑pressed into pure oil.
+              </p>
+            </article>
+
+            <!-- Step 4 -->
+            <article
+              class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+              <img
+                src="assets/images/PACKAGING.jpg"
+                alt="Packaging"
+                class="mb-4 h-32 w-full rounded-2xl object-cover"
+              />
+              <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
+                STEP 4
+              </p>
+              <h3 class="mt-2 text-sm font-semibold text-emerald-900">
+                Packaging
+              </h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Bottled in food‑grade containers with minimal handling.
+              </p>
+            </article>
+
+            <!-- Step 5 -->
+            <article
+              class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+              <img
+                src="assets/images/DOOR-STEP.jpg"
+                alt="Doorstep delivery"
+                class="mb-4 h-32 w-full rounded-2xl object-cover"
+              />
+              <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
+                STEP 5
+              </p>
+              <h3 class="mt-2 text-sm font-semibold text-emerald-900">
+                Doorstep
+              </h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Delivered fresh to your home, ready for your rituals.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sustainable by Choice + Farmer stories with FARMERS image -->
+      <section class="bg-cocoBeige">
+        <div class="mx-auto max-w-6xl px-4 pb-16">
+          <div
+            class="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-start"
+          >
+            <div>
+              <h2 class="text-2xl font-semibold text-emerald-900 sm:text-3xl">
+                Sustainable by Choice
+              </h2>
+              <p class="mt-4 text-sm text-slate-700 sm:text-base">
+                Mysti CoCo aims to keep packaging minimal and recyclable, and to
+                work closely with coconut‑growing communities.
+              </p>
+              <ul class="mt-4 space-y-2 text-sm text-slate-700 sm:text-base">
+                <li>• Focus on recyclable, minimal packaging where possible.</li>
+                <li>• Long‑term relationships with local farmers.</li>
+                <li>
+                  • Transparent sourcing and batch‑wise traceability (roadmap).
+                </li>
+              </ul>
+            </div>
+
+            <div class="md:pl-8 space-y-4">
+              <div>
+                <p class="text-sm font-semibold text-emerald-900">
+                  Farmer stories
+                </p>
+                <p class="mt-2 text-sm text-slate-700">
+                  Behind every bottle is the work of families who have cared for
+                  their coconut groves for generations. Mysti CoCo’s focus is on
+                  fair, long‑term partnerships that value both quality and
+                  community.
+                </p>
+              </div>
+
+              <!-- FARMERS image -->
+              <div
+                class="overflow-hidden rounded-3xl shadow-soft-xl ring-1 ring-emerald-50"
+              >
+                <img
+                  src="assets/images/FARMERS.jpg"
+                  alt="Farmers harvesting coconuts in tropical groves"
+                  class="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- DIY Corner & Blog teaser -->
-    <section class="fade-section bg-cocoBeige/60">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-center text-2xl font-semibold text-cocoGreen">DIY Corner</h2>
-        <p class="mt-2 text-center text-sm text-slate-700">
-          Recipes, beauty hacks and wellness rituals powered by Mysti CoCo.
+      <!-- Contact -->
+      <section id="contact" class="bg-cocoBeige">
+        <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div
+            class="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-center"
+          >
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-[0.20em] text-emerald-700"
+              >
+                CONTACT
+              </p>
+              <h2
+                class="mt-3 text-2xl font-semibold text-emerald-900 sm:text-3xl"
+              >
+                Reach out for availability and enquiries.
+              </h2>
+              <p class="mt-3 text-sm text-slate-600 sm:text-base">
+                For information on availability, pack sizes, or partnering
+                opportunities, connect over phone or WhatsApp using the details
+                below.
+              </p>
+
+              <div class="mt-5 space-y-3 text-sm text-slate-700">
+                <p>
+                  <span class="font-semibold text-emerald-800">
+                    Phone / WhatsApp:
+                  </span>
+                  <span class="ml-1">To be updated</span>
+                </p>
+                <p>
+                  <span class="font-semibold text-emerald-800">Email:</span>
+                  <span class="ml-1">To be updated</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card"
+            >
+              <p class="text-sm font-semibold text-emerald-900">
+                Where to buy
+              </p>
+              <p class="mt-2 text-sm text-slate-600">
+                Mysti CoCo Virgin Coconut Milk Oil will be available through
+                select stores and online channels. Once finalised, links and
+                store information will be added here and on the shop page.
+              </p>
+
+              <div
+                class="mt-4 rounded-2xl bg-emerald-50/70 p-4 text-xs text-slate-700"
+              >
+                <p class="font-semibold text-emerald-800">Note</p>
+                <p class="mt-1">
+                  Always follow storage instructions on the pack. If you have
+                  specific medical conditions, dietary restrictions, or
+                  allergies, seek professional advice before including any oil
+                  in your routine.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-emerald-50 bg-cocoBeige/90">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-4 text-xs text-slate-500 sm:flex-row"
+      >
+        <p>
+          ©
+          <span id="yearSpan"></span>
+          Mysti CoCo. All rights reserved.
         </p>
-
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <div class="rounded-3xl bg-white p-6 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Coconut Diaries</h3>
-            <p class="mt-2 text-xs text-slate-700">
-              Stories and tips on how to make virgin coconut oil part of your daily routine.
-            </p>
-            <button class="mt-3 text-xs font-semibold text-cocoGreen underline underline-offset-4">
-              Coming soon
-            </button>
-          </div>
-          <div class="rounded-3xl bg-white p-6 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Recipes</h3>
-            <p class="mt-2 text-xs text-slate-700">
-              Swap regular oil with Mysti CoCo in curries, stir‑fries and baking for a gentle nutty note.
-            </p>
-            <button class="mt-3 text-xs font-semibold text-cocoGreen underline underline-offset-4">
-              Coming soon
-            </button>
-          </div>
-          <div class="rounded-3xl bg-white p-6 shadow-sm">
-            <h3 class="text-sm font-semibold text-cocoGreen">Beauty Hacks</h3>
-            <p class="mt-2 text-xs text-slate-700">
-              Overnight hair masks, lip scrubs and gentle body polishing ideas with coconut oil.
-            </p>
-            <button class="mt-3 text-xs font-semibold text-cocoGreen underline underline-offset-4">
-              Coming soon
-            </button>
-          </div>
-        </div>
+        <p class="text-[11px]">
+          Imagery and descriptions are for representation only. Product details,
+          pricing, and availability are subject to change.
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <!-- Certifications -->
-    <section class="fade-section bg-white">
-      <div class="mx-auto max-w-6xl px-4 py-12">
-        <div class="rounded-3xl bg-cocoBeige/60 px-6 py-8 text-center md:px-10">
-          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-cocoBrown">Certifications</p>
-          <h2 class="mt-2 text-xl font-semibold text-cocoGreen">Trust in Every Drop</h2>
-          <p class="mt-2 text-sm text-slate-700">
-            Replace these placeholders with your actual certifications, lab reports and licenses.
-          </p>
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-cocoGreen">
-            <span class="rounded-full bg-white px-4 py-2 shadow-sm">FSSAI</span>
-            <span class="rounded-full bg-white px-4 py-2 shadow-sm">Cold‑Pressed</span>
-            <span class="rounded-full bg-white px-4 py-2 shadow-sm">Lab Tested</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Contact / Footer -->
-  <footer id="contact" class="border-t border-slate-100 bg-cocoBeige/60">
-    <div class="mx-auto max-w-6xl px-4 py-8">
-      <div class="grid gap-6 md:grid-cols-3">
-        <div>
-          <h3 class="text-sm font-semibold text-cocoGreen">Mysti CoCo</h3>
-          <p class="mt-2 text-xs text-slate-700">
-            Virgin coconut milk oil crafted for daily rituals. Update this block with your official brand story.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold text-cocoGreen">Contact</h4>
-          <p class="mt-2 text-xs text-slate-700">
-            Phone / WhatsApp: +91‑XXXXXXXXXX<br />
-            Email: hello@mysticoco.in<br />
-            Location: City, State
-          </p>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold text-cocoGreen">Quick links</h4>
-          <ul class="mt-2 space-y-1 text-xs text-slate-700">
-            <li><a href="#top" class="hover:text-cocoGreen">Home</a></li>
-            <li><a href="./shop.html" class="hover:text-cocoGreen">Shop</a></li>
-            <li><a href="#about" class="hover:text-cocoGreen">About</a></li>
-            <li><a href="#products" class="hover:text-cocoGreen">Products</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="mt-6 text-center text-[11px] text-slate-500">
-        © <span id="year"></span> Mysti CoCo. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <script src="./scripts/main.js"></script>
-</body>
+    <script>
+      document.getElementById("yearSpan").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>
+
+
 
