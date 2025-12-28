@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 .netlify/
+
+# Session memory — local only, never committed
+CLAUDE.md

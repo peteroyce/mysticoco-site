@@ -467,116 +467,61 @@
                 </div>
               </div>
 
-              <!-- Product Detail: Naturenut -->
-              <div id="detail-naturenut" class="product-detail hidden">
-                <div class="grid gap-8 lg:grid-cols-2">
-                  <!-- Product Image -->
-                  <div class="overflow-hidden rounded-3xl">
-                    <img
-                      src="assets/images/Naturenut.jpg"
-                      alt="Naturenut Certified Coconut Oil"
-                      class="h-full w-full object-cover"
-                    />
+              <!-- Naturenut Details (hidden by default) -->
+              <div
+                id="naturenut-details"
+                class="hidden rounded-3xl bg-white p-6 shadow-soft-xl ring-1 ring-emerald-50"
+              >
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.20em] text-amber-700"
+                >
+                  Product Details
+                </p>
+                <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
+                  Naturenut – <span id="naturenut-size-title">100 ml</span>
+                </h2>
+                <p class="mt-3 text-sm text-slate-700">
+                  Premium virgin coconut oil extracted from fresh coconuts and
+                  produced in certified facilities to ensure consistent purity
+                  and quality.
+                </p>
+
+                <div class="mt-5 space-y-3 text-sm">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Range</span>
+                    <span class="text-slate-700">Certified Coconut Oil</span>
                   </div>
-
-                  <!-- Product Info -->
-                  <div>
-                    <div
-                      class="inline-block rounded-full bg-emerald-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-800"
-                    >
-                      Certified Quality
-                    </div>
-
-                    <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
-                      Naturenut - Certified Coconut Oil – <span id="naturenut-size-title">100 ml</span>
-                    </h2>
-                    <p class="mt-3 text-sm text-slate-700">
-                      Extracted from fresh coconuts and produced in certified facilities to ensure consistent purity and quality.
-                    </p>
-
-                    <div class="mt-5 space-y-3 text-sm">
-                      <div class="flex justify-between">
-                        <span class="font-semibold text-emerald-900">Range</span>
-                        <span class="text-slate-700">Certified Coconut Oil</span>
-                      </div>
-                      <div class="flex justify-between">
-                        <span class="font-semibold text-emerald-900">Pack Size</span>
-                        <span class="text-slate-700" id="naturenut-pack-size">100 ml</span>
-                      </div>
-                      <div class="flex justify-between">
-                        <span class="font-semibold text-emerald-900">Production</span>
-                        <span class="text-slate-700">Certified Facility</span>
-                      </div>
-                      <div class="flex justify-between">
-                        <span class="font-semibold text-emerald-900">Quality</span>
-                        <span class="text-slate-700">Consistent Purity</span>
-                      </div>
-                    </div>
-
-                    <!-- Size Selection -->
-                    <div class="mt-6">
-                      <p class="text-sm font-semibold text-emerald-900">Select Size</p>
-                      <div class="mt-3 flex flex-wrap gap-3">
-                        <button
-                          class="size-btn-naturenut rounded-full border-2 border-emerald-700 bg-emerald-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
-                          data-size="100 ml"
-                          onclick="selectSize('naturenut', '100 ml', this)"
-                        >
-                          100 ml
-                        </button>
-                        <button
-                          class="size-btn-naturenut rounded-full border-2 border-emerald-700 px-6 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
-                          data-size="200 ml"
-                          onclick="selectSize('naturenut', '200 ml', this)"
-                        >
-                          200 ml
-                        </button>
-                        <button
-                          class="size-btn-naturenut rounded-full border-2 border-emerald-700 px-6 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
-                          data-size="500 ml"
-                          onclick="selectSize('naturenut', '500 ml', this)"
-                        >
-                          500 ml
-                        </button>
-                        <button
-                          class="size-btn-naturenut rounded-full border-2 border-emerald-700 px-6 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
-                          data-size="1 L"
-                          onclick="selectSize('naturenut', '1 L', this)"
-                        >
-                          1 L
-                        </button>
-                      </div>
-                    </div>
-
-                    <!-- Notice -->
-                    <div class="mt-6 rounded-2xl bg-amber-50 p-4">
-                      <p class="text-sm text-amber-900">
-                        <strong>Note:</strong> Currently not available for purchase online.
-                        Please contact us for wholesale or retail inquiries.
-                      </p>
-                    </div>
-
-                    <!-- Back Button -->
-                    <button
-                      onclick="hideProductDetail()"
-                      class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 transition hover:text-emerald-900"
-                    >
-                      <svg
-                        class="h-4 w-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 19l-7-7 7-7"
-                        ></path>
-                      </svg>
-                      Back to Products
-                    </button>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Pack size</span>
+                    <span id="naturenut-pack-size" class="text-slate-700">100 ml</span>
                   </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Production</span>
+                    <span class="text-slate-700">Certified Facility</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-emerald-900">Quality</span>
+                    <span class="text-slate-700">Consistent Purity</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-5 rounded-2xl bg-amber-50/70 p-4 text-xs text-slate-700"
+                >
+                  <p class="font-semibold text-amber-800">Note</p>
+                  <p class="mt-1">
+                    Currently not available for purchase online. Please contact
+                    us for wholesale or retail enquiries.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <a
+                    href="index.html#contact"
+                    class="block w-full rounded-full bg-emerald-700 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:bg-emerald-800 hover:-translate-y-0.5"
+                  >
+                    Contact for availability
+                  </a>
                 </div>
               </div>
 
@@ -666,28 +611,13 @@
     <script>
       document.getElementById("yearSpan").textContent = new Date().getFullYear();
 
-      function showProductDetail(productId) {
-        // Hide product list
-        document.getElementById("product-list").classList.add("hidden");
-
-        // Hide all product details
-        document.querySelectorAll(".product-detail").forEach((detail) => {
-          detail.classList.add("hidden");
-        });
-
-        // Show selected product detail
-        document.getElementById("detail-" + productId).classList.remove("hidden");
-
-        // Show detail container
-        document.getElementById("product-detail-container").classList.remove("hidden");
-      }
-
       // Show product details when clicking on product card
       function showProductDetails(productId) {
         // Hide all detail sections
-        document.getElementById("mysticoco-details").classList.add("hidden");
-        document.getElementById("cococare-details").classList.add("hidden");
-        document.getElementById("cocothera-details").classList.add("hidden");
+        var allIds = ["mysticoco-details", "cococare-details", "naturenut-details", "cocothera-details"];
+        allIds.forEach(function(id) {
+          document.getElementById(id).classList.add("hidden");
+        });
 
         // Show selected product details
         document.getElementById(productId + "-details").classList.remove("hidden");
