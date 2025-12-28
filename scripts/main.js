@@ -30,8 +30,9 @@ document.querySelectorAll('.fade-section').forEach((section) => {
   observer.observe(section);
 });
 
-// Footer year
-const yearSpan = document.getElementById('year');
+// Footer year — both pages set this via an inline script as well,
+// but this handles any page that includes main.js without an inline fallback.
+const yearSpan = document.getElementById('yearSpan') || document.getElementById('year');
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
