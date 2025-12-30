@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate HTML files exist
+        run: |
+          for f in index.html shop.html; do
+            if [ ! -f "$f" ]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+          done
+          echo "All HTML files present"
+
+      - name: Check for broken internal links
+        run: |
+          for file in *.html; do
+            echo "Checking $file..."
+            grep -oP 'href="(?!http|#|mailto|tel)([^"]+)"' "$file" | \
+              sed 's/href="//;s/"//' | while read link; do
+                if [ ! -f "$link" ] && [ ! -d "$link" ]; then
+                  echo "WARNING: Broken link '$link' in $file"
+                fi
+              done
+          done
+
+      - name: Validate sitemap.xml
+        run: xmllint --noout sitemap.xml
