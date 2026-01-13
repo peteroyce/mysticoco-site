@@ -101,6 +101,7 @@
               <!-- Product 1: Mysti CoCo Virgin Coconut Oil -->
               <article
                 class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                data-product="mysticoco"
                 onclick="showProductDetails('mysticoco')"
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
@@ -126,22 +127,34 @@
                     </p>
                     <div class="mt-2 flex flex-wrap gap-2">
                       <button
-                        class="rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                        data-size="100 ml"
+                        data-product="mysticoco"
+                        class="size-btn rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         100 ml
                       </button>
                       <button
-                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        data-size="200 ml"
+                        data-product="mysticoco"
+                        class="size-btn rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         200 ml
                       </button>
                       <button
-                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        data-size="500 ml"
+                        data-product="mysticoco"
+                        class="size-btn rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         500 ml
                       </button>
                       <button
-                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        data-size="1 LTR"
+                        data-product="mysticoco"
+                        class="size-btn rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         1 LTR
                       </button>
@@ -153,6 +166,7 @@
               <!-- Product 2: Coco Care - Baby Oil -->
               <article
                 class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                data-product="cococare"
                 onclick="showProductDetails('cococare')"
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
@@ -178,12 +192,18 @@
                     </p>
                     <div class="mt-2 flex flex-wrap gap-2">
                       <button
-                        class="rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                        data-size="100 ml"
+                        data-product="cococare"
+                        class="size-btn rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         100 ml
                       </button>
                       <button
-                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        data-size="200 ml"
+                        data-product="cococare"
+                        class="size-btn rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         200 ml
                       </button>
@@ -195,6 +215,7 @@
               <!-- Product 3: Coco Thera -->
               <article
                 class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                data-product="cocothera"
                 onclick="showProductDetails('cocothera')"
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
@@ -220,12 +241,18 @@
                     </p>
                     <div class="mt-2 flex flex-wrap gap-2">
                       <button
-                        class="rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                        data-size="100 ml"
+                        data-product="cocothera"
+                        class="size-btn rounded-full border-2 border-emerald-700 bg-emerald-700 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         100 ml
                       </button>
                       <button
-                        class="rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        data-size="200 ml"
+                        data-product="cocothera"
+                        class="size-btn rounded-full border-2 border-emerald-700 px-4 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+                        onclick="event.stopPropagation(); selectSize(this)"
                       >
                         200 ml
                       </button>
@@ -248,7 +275,7 @@
                   Product Details
                 </p>
                 <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
-                  Mysti CoCo Virgin Coconut Oil – 100 ml
+                  Mysti CoCo Virgin Coconut Oil – <span id="mysticoco-size-title">100 ml</span>
                 </h2>
                 <p class="mt-3 text-sm text-slate-700">
                   Multi-use virgin coconut oil extracted from fresh coconut milk,
@@ -262,7 +289,7 @@
                   </div>
                   <div class="flex justify-between">
                     <span class="font-semibold text-emerald-900">Pack size</span>
-                    <span class="text-slate-700">100 ml</span>
+                    <span id="mysticoco-pack-size" class="text-slate-700">100 ml</span>
                   </div>
                   <div class="flex justify-between">
                     <span class="font-semibold text-emerald-900">Skin / hair type</span>
@@ -310,7 +337,7 @@
                   Product Details
                 </p>
                 <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
-                  Coco Care – Baby Oil – 100 ml
+                  Coco Care – Baby Oil – <span id="cococare-size-title">100 ml</span>
                 </h2>
                 <p class="mt-3 text-sm text-slate-700">
                   Gentle virgin coconut-based baby oil for massage and soft,
@@ -324,7 +351,7 @@
                   </div>
                   <div class="flex justify-between">
                     <span class="font-semibold text-emerald-900">Pack size</span>
-                    <span class="text-slate-700">100 ml</span>
+                    <span id="cococare-pack-size" class="text-slate-700">100 ml</span>
                   </div>
                   <div class="flex justify-between">
                     <span class="font-semibold text-emerald-900">Skin type</span>
@@ -372,7 +399,7 @@
                   Product Details
                 </p>
                 <h2 class="mt-3 text-2xl font-semibold text-emerald-900">
-                  Coco Thera – 100 ml
+                  Coco Thera – <span id="cocothera-size-title">100 ml</span>
                 </h2>
                 <p class="mt-3 text-sm text-slate-700">
                   Therapeutic coconut-based blend designed for targeted massage and
@@ -386,7 +413,7 @@
                   </div>
                   <div class="flex justify-between">
                     <span class="font-semibold text-emerald-900">Pack size</span>
-                    <span class="text-slate-700">100 ml</span>
+                    <span id="cocothera-pack-size" class="text-slate-700">100 ml</span>
                   </div>
                   <div class="flex justify-between">
                     <span class="font-semibold text-emerald-900">Use</span>
@@ -445,9 +472,9 @@
     </footer>
 
     <script>
-      document.getElementById("yearSpan").textContent =
-        new Date().getFullYear();
+      document.getElementById("yearSpan").textContent = new Date().getFullYear();
 
+      // Show product details when clicking on product card
       function showProductDetails(productId) {
         // Hide all detail sections
         document.getElementById("mysticoco-details").classList.add("hidden");
@@ -456,6 +483,65 @@
 
         // Show selected product details
         document.getElementById(productId + "-details").classList.remove("hidden");
+
+        // Reset size selection to default (100ml) when switching products
+        const defaultSize = "100 ml";
+        updatePackSize(productId, defaultSize);
+        
+        // Reset button states
+        const productCard = document.querySelector(`[data-product="${productId}"]`);
+        if (productCard) {
+          const sizeButtons = productCard.querySelectorAll('.size-btn');
+          sizeButtons.forEach(btn => {
+            if (btn.getAttribute('data-size') === defaultSize) {
+              btn.classList.remove('text-emerald-700');
+              btn.classList.add('bg-emerald-700', 'text-white');
+            } else {
+              btn.classList.remove('bg-emerald-700', 'text-white');
+              btn.classList.add('text-emerald-700');
+            }
+          });
+        }
+      }
+
+      // Handle size button clicks
+      function selectSize(button) {
+        const size = button.getAttribute('data-size');
+        const productId = button.getAttribute('data-product');
+        
+        // Remove active class from all size buttons in this product
+        const productCard = button.closest('[data-product]');
+        const sizeButtons = productCard.querySelectorAll('.size-btn');
+        sizeButtons.forEach(btn => {
+          btn.classList.remove('bg-emerald-700', 'text-white');
+          btn.classList.add('text-emerald-700');
+        });
+        
+        // Add active class to clicked button
+        button.classList.remove('text-emerald-700');
+        button.classList.add('bg-emerald-700', 'text-white');
+        
+        // Update pack size in product details
+        updatePackSize(productId, size);
+        
+        // Show product details if not already visible
+        const detailsPanel = document.getElementById(productId + '-details');
+        if (detailsPanel.classList.contains('hidden')) {
+          showProductDetails(productId);
+        }
+      }
+
+      // Update pack size display in product details
+      function updatePackSize(productId, size) {
+        const packSizeElement = document.getElementById(productId + '-pack-size');
+        const sizeTitleElement = document.getElementById(productId + '-size-title');
+        
+        if (packSizeElement) {
+          packSizeElement.textContent = size;
+        }
+        if (sizeTitleElement) {
+          sizeTitleElement.textContent = size;
+        }
       }
     </script>
   </body>
