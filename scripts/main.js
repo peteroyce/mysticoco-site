@@ -36,3 +36,5 @@ const yearSpan = document.getElementById('yearSpan') || document.getElementById(
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+
+<!-- add lazy loading -->
