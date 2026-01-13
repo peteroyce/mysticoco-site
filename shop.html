@@ -513,16 +513,17 @@
         const size = button.getAttribute('data-size');
         const productId = button.getAttribute('data-product');
         
-        // Remove active class from all size buttons in this product
+        // Get the product card containing this button
         const productCard = button.closest('[data-product]');
         const sizeButtons = productCard.querySelectorAll('.size-btn');
+        
+        // Remove active state from ALL buttons in this product first
         sizeButtons.forEach(btn => {
-          // Reset to unselected state (white background, green text)
           btn.classList.remove('bg-emerald-700', 'text-white');
           btn.classList.add('bg-white', 'text-emerald-700');
         });
         
-        // Add active class to clicked button only (green background, white text)
+        // Add active state ONLY to clicked button
         button.classList.remove('bg-white', 'text-emerald-700');
         button.classList.add('bg-emerald-700', 'text-white');
         
