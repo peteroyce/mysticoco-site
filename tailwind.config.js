@@ -21,3 +21,5 @@ module.exports = {
 };
 
 <!-- add structured data -->
+
+<!-- TODO: fix header alignment -->
