@@ -12,6 +12,7 @@
   <meta name="author" content="Mysti CoCo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mysticoco.in/shop.html" />
+  <link rel="icon" type="image/jpeg" href="assets/images/Mysticoco-Logo.jpg" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -21,11 +22,11 @@
   <meta property="og:image" content="https://mysticoco.in/assets/images/Elegant-Curved-Bottle-on-Moss.jpg" />
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://mysticoco.in/shop.html" />
-  <meta property="twitter:title" content="Mysti CoCo - Extra Virgin Coconut Oil" />
-  <meta property="twitter:description" content="Premium extra virgin coconut oil made from fresh coconut milk. Perfect for cooking, hair care, and wellness rituals." />
-  <meta property="twitter:image" content="https://mysticoco.in/assets/images/Elegant-Curved-Bottle-on-Moss.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://mysticoco.in/shop.html" />
+  <meta name="twitter:title" content="Mysti CoCo - Extra Virgin Coconut Oil" />
+  <meta name="twitter:description" content="Premium extra virgin coconut oil made from fresh coconut milk. Perfect for cooking, hair care, and wellness rituals." />
+  <meta name="twitter:image" content="https://mysticoco.in/assets/images/Elegant-Curved-Bottle-on-Moss.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,28 +36,8 @@
     rel="stylesheet"
   />
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["Poppins", "system-ui", "sans-serif"],
-          },
-          colors: {
-            cocoGreen: "#1F7A3D",
-            cocoBeige: "#F8F3E9",
-            cocoGold: "#C9A24B",
-          },
-          boxShadow: {
-            "soft-xl": "0 28px 60px rgba(15, 23, 42, 0.18)",
-            "lift-card": "0 18px 40px rgba(15, 23, 42, 0.16)",
-          },
-        },
-      },
-    };
-  </script>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
 
   <style>
     html {
@@ -97,7 +78,25 @@
           <a href="shop.html" class="text-emerald-700 font-semibold">Shop</a>
           <a href="index.html#contact" class="hover:text-emerald-700">Contact</a>
         </div>
+
+        <button id="mobile-menu-btn" class="sm:hidden p-2 text-slate-700 hover:text-emerald-700" aria-label="Toggle navigation menu">
+          <svg id="icon-open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </nav>
+
+      <div id="mobile-menu" class="hidden sm:hidden border-t border-emerald-50 bg-cocoBeige/95 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-4 py-3 space-y-1 text-sm font-medium text-slate-700">
+          <a href="index.html#about" class="block py-2 hover:text-emerald-700">About</a>
+          <a href="index.html#benefits" class="block py-2 hover:text-emerald-700">Benefits</a>
+          <a href="shop.html" class="block py-2 text-emerald-700 font-semibold">Shop</a>
+          <a href="index.html#contact" class="block py-2 hover:text-emerald-700">Contact</a>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -122,15 +121,19 @@
             <div class="space-y-6">
               <!-- Product 1: Mysti CoCo Extra Virgin Coconut Oil -->
               <article
-                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 data-product="mysticoco"
                 onclick="showProductDetails('mysticoco')"
+                tabindex="0"
+                role="button"
+                aria-label="View Mysti CoCo Extra Virgin Coconut Oil details"
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                   <img
                     src="assets/images/Mysticoco.jpg"
                     alt="Mysti CoCo Extra Virgin Coconut Oil"
                     class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
+                    loading="lazy"
                   />
                 </div>
 
@@ -187,15 +190,19 @@
 
               <!-- Product 2: Coco Care - Baby Oil -->
               <article
-                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 data-product="cococare"
                 onclick="showProductDetails('cococare')"
+                tabindex="0"
+                role="button"
+                aria-label="View Coco Care Baby Oil details"
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                   <img
                     src="assets/images/HAIR.jpg"
                     alt="Coco Care Baby Oil"
                     class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
+                    loading="lazy"
                   />
                 </div>
 
@@ -236,15 +243,19 @@
               
               <!-- Product 3: Naturenut -->
               <article
-              class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+              class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-600"
               data-product="naturenut"
               onclick="showProductDetails('naturenut')"
+              tabindex="0"
+              role="button"
+              aria-label="View Naturenut details"
               >
               <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                 <img
                   src="assets/images/Naturenut.jpg"
                   alt="Naturenut Virgin Coconut Oil"
                   class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
+                  loading="lazy"
                 />
               </div>
 
@@ -293,15 +304,19 @@
 
               <!-- Product 4: Coco Thera -->
               <article
-                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer"
+                class="group flex gap-4 rounded-3xl bg-white p-5 shadow-soft-xl ring-1 ring-emerald-50 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lift-card cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-600"
                 data-product="cocothera"
                 onclick="showProductDetails('cocothera')"
+                tabindex="0"
+                role="button"
+                aria-label="View Coco Thera details"
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                   <img
                     src="assets/images/WELLNESS.jpg"
                     alt="Coco Thera"
                     class="h-full w-full object-cover scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
+                    loading="lazy"
                   />
                 </div>
 
@@ -679,7 +694,7 @@
       function updatePackSize(productId, size) {
         const packSizeElement = document.getElementById(productId + '-pack-size');
         const sizeTitleElement = document.getElementById(productId + '-size-title');
-        
+
         if (packSizeElement) {
           packSizeElement.textContent = size;
         }
@@ -687,6 +702,17 @@
           sizeTitleElement.textContent = size;
         }
       }
+
+      // Keyboard accessibility for product cards
+      document.querySelectorAll('article[role="button"]').forEach(function(card) {
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+      });
     </script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
