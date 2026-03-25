@@ -12,7 +12,7 @@
   <meta name="author" content="Mysti CoCo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mysticoco.in/shop.html" />
-  <link rel="icon" type="image/jpeg" href="assets/images/Mysticoco-Logo.jpg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-32.png" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -39,14 +39,12 @@
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <!-- Preload primary font weight -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 
   <body class="min-h-screen bg-cocoBeige font-sans text-slate-800">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-emerald-700 focus:text-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold">Skip to content</a>
     <!-- Navbar -->
     <header
       class="sticky top-0 z-20 bg-cocoBeige/95 backdrop-blur border-b border-emerald-50"
@@ -56,9 +54,11 @@
       >
         <a href="index.html" class="flex items-center gap-3">
           <img 
-            src="assets/images/Mysticoco-Logo.jpg" 
-            alt="Mysti CoCo Logo" 
+            src="assets/images/Mysticoco-Logo.jpg"
+            alt="Mysti CoCo Logo"
             class="h-10 w-auto"
+            width="40"
+            height="40"
           />
           <div class="flex flex-col leading-tight">
             <span class="text-base font-semibold text-emerald-900">
@@ -99,7 +99,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Shop Header -->
       <section class="bg-cocoBeige">
         <div class="mx-auto max-w-6xl px-4 py-12">
@@ -130,17 +130,19 @@
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                   <img
-                    src="assets/images/Mysticoco.jpg"
+                    src="assets/images/Extra-Virgin-Coconut-Oil.jpg"
                     alt="Mysti CoCo Extra Virgin Coconut Oil"
                     class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
                     loading="lazy"
+                    width="800"
+                    height="1200"
                   />
                 </div>
 
                 <div class="flex-1">
-                  <h3 class="text-lg font-semibold text-emerald-900">
+                  <h2 class="text-lg font-semibold text-emerald-900">
                     Mysti CoCo Extra Virgin Coconut Oil
-                  </h3>
+                  </h2>
                   <p class="mt-2 text-sm text-slate-600">
                     Everyday multi-use extra virgin coconut oil for cooking, hair, skin
                     and wellness.
@@ -199,17 +201,19 @@
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                   <img
-                    src="assets/images/HAIR.jpg"
+                    src="assets/images/CocoCare.jpg"
                     alt="Coco Care Baby Oil"
                     class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
                     loading="lazy"
+                    width="800"
+                    height="1200"
                   />
                 </div>
 
                 <div class="flex-1">
-                  <h3 class="text-lg font-semibold text-emerald-900">
+                  <h2 class="text-lg font-semibold text-emerald-900">
                     Coco Care – Baby Oil
-                  </h3>
+                  </h2>
                   <p class="mt-2 text-sm text-slate-600">
                     Gentle extra virgin coconut-based baby oil for massage and soft,
                     nourished skin.*
@@ -252,17 +256,19 @@
               >
               <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                 <img
-                  src="assets/images/Naturenut.jpg"
+                  src="assets/images/Nature-Nut.jpg"
                   alt="Naturenut Virgin Coconut Oil"
                   class="h-full w-full object-cover scale-125 transition-transform duration-300 group-hover:scale-[1.35]"
                   loading="lazy"
+                  width="800"
+                  height="1200"
                 />
               </div>
 
               <div class="flex-1">
-                <h3 class="text-lg font-semibold text-emerald-900">
+                <h2 class="text-lg font-semibold text-emerald-900">
                   Naturenut
-                </h3>
+                </h2>
                 <p class="mt-2 text-sm text-slate-600">
                   Premium Virgin Coconut Oil from nature. Made with love and care for your health.
                 </p>
@@ -313,17 +319,19 @@
               >
                 <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl">
                   <img
-                    src="assets/images/WELLNESS.jpg"
+                    src="assets/images/Coco-Thera.jpg"
                     alt="Coco Thera"
                     class="h-full w-full object-cover scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
                     loading="lazy"
+                    width="800"
+                    height="1200"
                   />
                 </div>
 
                 <div class="flex-1">
-                  <h3 class="text-lg font-semibold text-emerald-900">
+                  <h2 class="text-lg font-semibold text-emerald-900">
                     Coco Thera
-                  </h3>
+                  </h2>
                   <p class="mt-2 text-sm text-slate-600">
                     Therapeutic coconut-based blend designed for targeted massage
                     and relaxation.
@@ -714,5 +722,85 @@
       });
     </script>
     <script src="scripts/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Mysti CoCo Products",
+      "url": "https://mysticoco.in/shop.html",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Mysti CoCo Extra Virgin Coconut Oil",
+            "image": "https://mysticoco.in/assets/images/Extra-Virgin-Coconut-Oil.jpg",
+            "description": "Everyday multi-use extra virgin coconut oil for cooking, hair, skin and wellness.",
+            "brand": { "@type": "Brand", "name": "Mysti CoCo" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://mysticoco.in/shop.html",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/LimitedAvailability"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Coco Care – Baby Oil",
+            "image": "https://mysticoco.in/assets/images/CocoCare.jpg",
+            "description": "Gentle extra virgin coconut-based baby oil for massage and soft, nourished skin.",
+            "brand": { "@type": "Brand", "name": "Mysti CoCo" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://mysticoco.in/shop.html",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/LimitedAvailability"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Naturenut Virgin Coconut Oil",
+            "image": "https://mysticoco.in/assets/images/Nature-Nut.jpg",
+            "description": "Premium Virgin Coconut Oil from nature. Made with love and care for your health.",
+            "brand": { "@type": "Brand", "name": "Mysti CoCo" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://mysticoco.in/shop.html",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/LimitedAvailability"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Coco Thera",
+            "image": "https://mysticoco.in/assets/images/Coco-Thera.jpg",
+            "description": "Therapeutic coconut-based blend designed for targeted massage and relaxation.",
+            "brand": { "@type": "Brand", "name": "Mysti CoCo" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://mysticoco.in/shop.html",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/LimitedAvailability"
+            }
+          }
+        }
+      ]
+    }
+    </script>
   </body>
 </html>
