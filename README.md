@@ -13,7 +13,7 @@ Marketing and e-commerce website for **Mysti CoCo**, a premium cold-pressed extr
 | Layer | Technology |
 |-------|-----------|
 | Markup | HTML5 |
-| Styling | Tailwind CSS (CDN) |
+| Styling | Tailwind CSS (build-step, minified) |
 | Scripting | Vanilla JavaScript |
 | Fonts | Google Fonts (Poppins) |
 | Hosting | Netlify |
@@ -33,20 +33,26 @@ mysticoco-site/
 ├── scripts/
 │   └── main.js         # Mobile nav, scroll animations, footer year
 ├── assets/
+│   ├── css/
+│   │   ├── input.css   # Tailwind source
+│   │   └── tailwind.css # Compiled output
 │   └── images/         # Product and brand images
+├── tailwind.config.js
 ├── sitemap.xml
 ├── robots.txt
 └── netlify.toml        # Netlify config + security headers
 ```
 
 ## Running Locally
-This is a static site — no build step required.
 
 ```bash
-# Option 1: Open directly
-open index.html
+# Build Tailwind CSS
+npx tailwindcss -i assets/css/input.css -o assets/css/tailwind.css --minify
 
-# Option 2: Serve locally
+# For development (watch mode)
+npx tailwindcss -i assets/css/input.css -o assets/css/tailwind.css --watch
+
+# Serve locally
 python -m http.server 8000
 # Then visit http://localhost:8000
 ```
