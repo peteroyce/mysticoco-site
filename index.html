@@ -12,7 +12,7 @@
   <meta name="author" content="Mysti CoCo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mysticoco.in/" />
-  <link rel="icon" type="image/jpeg" href="assets/images/Mysticoco-Logo.jpg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-32.png" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -39,26 +39,15 @@
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .fade-section {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <!-- Preload primary font weight -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 
 
 
 
   <body class="min-h-screen bg-cocoBeige font-sans text-slate-800">
+    <a href="#top" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-emerald-700 focus:text-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold">Skip to content</a>
     <!-- Navbar -->
     <header
       class="sticky top-0 z-20 bg-cocoBeige/95 backdrop-blur border-b border-emerald-50"
@@ -68,9 +57,11 @@
       >
         <a href="#top" class="flex items-center gap-3">
           <img 
-            src="assets/images/Mysticoco-Logo.jpg" 
-            alt="Mysti CoCo Logo" 
+            src="assets/images/Mysticoco-Logo.jpg"
+            alt="Mysti CoCo Logo"
             class="h-10 w-auto"
+            width="40"
+            height="40"
           />
           <div class="flex flex-col leading-tight">
             <span class="text-base font-semibold text-emerald-900">
@@ -234,6 +225,8 @@
                     src="assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.jpg"
                     alt="Mysti CoCo Extra Virgin Coconut Milk Oil bottle on natural background"
                     class="h-full w-full object-cover scale-125 transition-transform duration-500 ease-out group-hover:scale-[1.35] group-hover:brightness-110"
+                    width="800"
+                    height="448"
                   />
                 </div>
                 <div class="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors duration-500 rounded-r-[2.2rem]"></div>
@@ -284,6 +277,8 @@
                   alt="Oil used for skin care"
                   class="h-28 w-28 rounded-full object-cover border-4 border-emerald-50 shadow-md transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
+                  width="112"
+                  height="112"
                 />
               </div>
               <h3 class="mt-4 text-sm font-semibold text-emerald-900">
@@ -306,6 +301,8 @@
                   alt="Oil used for hair care"
                   class="h-28 w-28 rounded-full object-cover border-4 border-emerald-50 shadow-md transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
+                  width="112"
+                  height="112"
                 />
               </div>
               <h3 class="mt-4 text-sm font-semibold text-emerald-900">
@@ -328,6 +325,8 @@
                   alt="Wellness rituals"
                   class="h-full w-full object-cover scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
                   loading="lazy"
+                  width="800"
+                  height="448"
                 />
               </div>
             </div>
@@ -443,6 +442,8 @@
                 alt="Coconut trees"
                 class="h-full w-full object-cover scale-125"
                 loading="lazy"
+                width="800"
+                height="448"
               />
             </div>
             
@@ -467,6 +468,8 @@
                 alt="Harvesting"
                 class="mb-4 h-32 w-full rounded-2xl object-cover"
                 loading="lazy"
+                width="800"
+                height="448"
               />
               <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
                 STEP 2
@@ -490,6 +493,8 @@
                 alt="Cold-pressing"
                 class="h-full w-full object-cover scale-125"
                 loading="lazy"
+                width="800"
+                height="448"
               />
             </div>
             
@@ -514,6 +519,8 @@
                 alt="Packaging"
                 class="mb-4 h-32 w-full rounded-2xl object-cover"
                 loading="lazy"
+                width="800"
+                height="448"
               />
               <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
                 STEP 4
@@ -536,6 +543,8 @@
                 alt="Doorstep delivery"
                 class="mb-4 h-32 w-full rounded-2xl object-cover"
                 loading="lazy"
+                width="800"
+                height="448"
               />
               <p class="text-[11px] font-semibold tracking-[0.18em] text-amber-700">
                 STEP 5
@@ -599,6 +608,8 @@
                   alt="Farmers harvesting coconuts in tropical groves"
                   class="w-full h-full object-cover"
                   loading="lazy"
+                  width="800"
+                  height="750"
                 />
               </div>
             </div>
@@ -707,6 +718,8 @@
                 alt="Dr Arun Kumar Rai Derla - Founder of Mysti CoCo"
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
+                width="128"
+                height="128"
               />
             </div>
 
@@ -738,6 +751,8 @@
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 style="object-position: center 20%;"
                 loading="lazy"
+                width="128"
+                height="128"
               />
             </div>
 
