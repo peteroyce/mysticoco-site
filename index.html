@@ -13,20 +13,26 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mysticoco.in/" />
   <link rel="icon" type="image/png" href="assets/images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#065f46" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mysticoco.in/" />
   <meta property="og:title" content="Mysti CoCo - Extra Virgin Coconut Oil | Pure Cold-Pressed" />
   <meta property="og:description" content="Premium extra virgin coconut oil made from fresh coconut milk. Perfect for cooking, hair care, and wellness rituals." />
-  <meta property="og:image" content="https://mysticoco.in/assets/images/Elegant-Curved-Bottle-on-Moss.jpg" />
+  <meta property="og:image" content="https://mysticoco.in/assets/images/og-image-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Mysti CoCo" />
+  <meta property="og:locale" content="en_IN" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://mysticoco.in/" />
   <meta name="twitter:title" content="Mysti CoCo - Extra Virgin Coconut Oil" />
   <meta name="twitter:description" content="Premium extra virgin coconut oil made from fresh coconut milk. Perfect for cooking, hair care, and wellness rituals." />
-  <meta name="twitter:image" content="https://mysticoco.in/assets/images/Elegant-Curved-Bottle-on-Moss.jpg" />
+  <meta name="twitter:image" content="https://mysticoco.in/assets/images/og-image-1200x630.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,8 +45,9 @@
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-  <!-- Preload primary font weight -->
+  <!-- Preload primary font weight and hero image -->
   <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.webp" as="image" type="image/webp" />
 </head>
 
 
@@ -57,7 +64,7 @@
       >
         <a href="#top" class="flex items-center gap-3">
           <img 
-            src="assets/images/Mysticoco-Logo.jpg"
+            src="assets/images/Mysticoco-Logo.webp"
             alt="Mysti CoCo Logo"
             class="h-10 w-auto"
             width="40"
@@ -222,11 +229,12 @@
                 <div class="relative min-h-[400px] md:min-h-full group cursor-pointer">
                   <div class="absolute inset-0 overflow-hidden rounded-r-[2.2rem]">
                   <img
-                    src="assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.jpg"
+                    src="assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.webp"
                     alt="Mysti CoCo Extra Virgin Coconut Milk Oil bottle on natural background"
                     class="h-full w-full object-cover scale-125 transition-transform duration-500 ease-out group-hover:scale-[1.35] group-hover:brightness-110"
                     width="800"
                     height="448"
+                    fetchpriority="high"
                   />
                 </div>
                 <div class="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors duration-500 rounded-r-[2.2rem]"></div>
@@ -273,7 +281,7 @@
             >
               <div class="relative h-28 w-28">
                 <img
-                  src="assets/images/SKIN.jpg"
+                  src="assets/images/SKIN.webp"
                   alt="Oil used for skin care"
                   class="h-28 w-28 rounded-full object-cover border-4 border-emerald-50 shadow-md transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -297,7 +305,7 @@
             >
               <div class="relative h-28 w-28">
                 <img
-                  src="assets/images/HAIR.jpg"
+                  src="assets/images/HAIR.webp"
                   alt="Oil used for hair care"
                   class="h-28 w-28 rounded-full object-cover border-4 border-emerald-50 shadow-md transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -321,8 +329,8 @@
             <div class="relative h-28 w-28">
               <div class="h-28 w-28 rounded-full border-4 border-emerald-50 shadow-md overflow-hidden">
                 <img
-                  src="assets/images/WELLNESS.jpg"
-                  alt="Wellness rituals"
+                  src="assets/images/WELLNESS.webp"
+                  alt="Coconut oil for wellness rituals"
                   class="h-full w-full object-cover scale-150 transition-transform duration-300 group-hover:scale-[1.6]"
                   loading="lazy"
                   width="800"
@@ -438,7 +446,7 @@
             >
             <div class="mb-4 h-32 w-full rounded-2xl overflow-hidden bg-emerald-50">
               <img
-                src="assets/images/TREES.jpg"
+                src="assets/images/TREES.webp"
                 alt="Coconut trees"
                 class="h-full w-full object-cover scale-125"
                 loading="lazy"
@@ -464,8 +472,8 @@
               class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
             >
               <img
-                src="assets/images/HARVESTING.jpg"
-                alt="Harvesting"
+                src="assets/images/HARVESTING.webp"
+                alt="Fresh coconut harvesting process"
                 class="mb-4 h-32 w-full rounded-2xl object-cover"
                 loading="lazy"
                 width="800"
@@ -489,7 +497,7 @@
             >
             <div class="mb-4 h-32 w-full rounded-2xl overflow-hidden bg-emerald-50">
               <img
-                src="assets/images/COLD-PRESSING.jpg"
+                src="assets/images/COLD-PRESSING.webp"
                 alt="Cold-pressing"
                 class="h-full w-full object-cover scale-125"
                 loading="lazy"
@@ -515,8 +523,8 @@
               class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
             >
               <img
-                src="assets/images/PACKAGING.jpg"
-                alt="Packaging"
+                src="assets/images/PACKAGING.webp"
+                alt="Coconut oil packaging in food-grade containers"
                 class="mb-4 h-32 w-full rounded-2xl object-cover"
                 loading="lazy"
                 width="800"
@@ -539,7 +547,7 @@
               class="flex flex-col rounded-3xl bg-white shadow-soft-xl ring-1 ring-emerald-50 p-4 sm:p-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lift-card"
             >
               <img
-                src="assets/images/DOOR-STEP.jpg"
+                src="assets/images/DOOR-STEP.webp"
                 alt="Doorstep delivery"
                 class="mb-4 h-32 w-full rounded-2xl object-cover"
                 loading="lazy"
@@ -604,7 +612,7 @@
                 class="overflow-hidden rounded-3xl shadow-soft-xl ring-1 ring-emerald-50"
               >
                 <img
-                  src="assets/images/FARMERS.jpg"
+                  src="assets/images/FARMERS.webp"
                   alt="Farmers harvesting coconuts in tropical groves"
                   class="w-full h-full object-cover"
                   loading="lazy"
@@ -714,7 +722,7 @@
             >
               <div class="mx-auto sm:mx-0 h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl ring-4 ring-white shadow-lg">
               <img
-                src="assets/images/Arun-Kumar.jpeg"
+                src="assets/images/Arun-Kumar.webp"
                 alt="Dr Arun Kumar Rai Derla - Founder of Mysti CoCo"
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
@@ -746,7 +754,7 @@
             >
               <div class="mx-auto sm:mx-0 h-32 w-32 flex-shrink-0 overflow-hidden rounded-3xl ring-4 ring-white shadow-lg">
               <img
-                src="assets/images/Manoj-Kumar.jpeg"
+                src="assets/images/Manoj-Kumar.webp"
                 alt="Manoj Kumar Madavu Shetty - Founder of Mysti CoCo"
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 style="object-position: center 20%;"
@@ -1103,11 +1111,19 @@
     <div
       class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-4 text-xs text-slate-500 sm:flex-row"
     >
-      <p>
-        ©
-        <span id="yearSpan"></span>
-        Mysti CoCo. All rights reserved.
-      </p>
+      <div class="flex flex-col items-center gap-2 sm:items-start">
+        <nav class="flex gap-4 text-xs text-slate-500">
+          <a href="index.html" class="hover:text-emerald-700 transition">Home</a>
+          <a href="shop.html" class="hover:text-emerald-700 transition">Shop</a>
+          <a href="#about" class="hover:text-emerald-700 transition">About</a>
+          <a href="#contact" class="hover:text-emerald-700 transition">Contact</a>
+        </nav>
+        <p>
+          &copy;
+          <span id="yearSpan"></span>
+          Mysti CoCo. All rights reserved.
+        </p>
+      </div>
       <p class="text-[11px]">
         Images and descriptions are for representation purposes only. Product details,
         pricing, and availability are subject to change.
@@ -1118,9 +1134,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mysti CoCo",
+    "url": "https://mysticoco.in"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Product",
     "name": "Mysti CoCo Extra Virgin Coconut Oil",
-    "image": "https://mysticoco.in/assets/images/Elegant-Curved-Bottle-on-Moss.jpg",
+    "image": "https://mysticoco.in/assets/images/Extra-Virgin-Coconut-Oil.jpg",
     "description": "Premium extra virgin coconut oil made from fresh coconut milk. Cold-pressed, FSSAI certified, perfect for cooking, hair care, and skin care.",
     "brand": {
       "@type": "Brand",
@@ -1129,7 +1154,6 @@
     "offers": {
       "@type": "Offer",
       "url": "https://mysticoco.in/shop.html",
-      "priceCurrency": "INR",
       "availability": "https://schema.org/LimitedAvailability"
     }
   }
@@ -1157,10 +1181,6 @@
   }
   </script>
 
-  <script>
-    document.getElementById("yearSpan").textContent = new Date().getFullYear();
-  </script>
-  
   <script src="scripts/main.js"></script>
   </body>
   </html>

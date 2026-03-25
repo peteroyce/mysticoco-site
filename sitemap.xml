@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mysticoco.in/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mysticoco.in/assets/images/PURE-COLD-PRESSED-PHOTO-OF-A-VIRGIN-COCONUT-OIL.jpg</image:loc>
+      <image:title>Mysti CoCo Extra Virgin Coconut Milk Oil</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mysticoco.in/assets/images/Mysticoco-Logo.jpg</image:loc>
+      <image:title>Mysti CoCo Logo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://mysticoco.in/shop.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mysticoco.in/assets/images/Extra-Virgin-Coconut-Oil.jpg</image:loc>
+      <image:title>Mysti CoCo Extra Virgin Coconut Oil</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mysticoco.in/assets/images/CocoCare.jpg</image:loc>
+      <image:title>Coco Care Baby Oil</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mysticoco.in/assets/images/Nature-Nut.jpg</image:loc>
+      <image:title>Naturenut Virgin Coconut Oil</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mysticoco.in/assets/images/Coco-Thera.jpg</image:loc>
+      <image:title>Coco Thera Therapeutic Coconut Oil</image:title>
+    </image:image>
   </url>
 </urlset>
