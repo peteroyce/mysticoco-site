@@ -19,7 +19,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-<!-- add structured data -->
-
-<!-- TODO: fix header alignment -->
